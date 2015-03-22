@@ -4,7 +4,8 @@
   "description": "> 웹 Front-end 개발 분야의 전문과정을 통한 체계적이고 실질적인 구현 방법을 습득한다",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gitbook serve ."
   },
   "repository": {
     "type": "git",

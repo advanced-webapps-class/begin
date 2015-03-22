@@ -17,7 +17,7 @@ var x = 'abc';
 * 첫번째 문자로 숫자 불가능
 * 변수명 대소문자 구분
 * 어떤 값도 넣기 가능, 자동 타입을 변환
-* [예약어](https://msdn.microsoft.com/ko-kr/library/ie/0779sbks(v=vs.94).aspx)는 사용불가
+* [예약어](http://goo.gl/DrxsXd)는 사용불가
 
 ## 대소문자 구분
 

@@ -9,7 +9,7 @@
 
 ## 에디터
 
-![](./assets/1426687170635.png)
+![](http://i.imgur.com/2up0CSR.png)
 
 * [Atom](https://atom.io/)
 * javascript로 만들어진 (node.js)
@@ -28,7 +28,7 @@
 
 ## Node.js
 
-![](./assets/1426687549626.png)
+![](http://i.imgur.com/oGxW6qq.png)
 
 * Chrome's JavaScript runtime
 * backend 플랫폼
