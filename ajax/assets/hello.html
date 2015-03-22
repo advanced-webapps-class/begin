@@ -1,0 +1,37 @@
+<!-- http://jsfiddle.net/niceaji/ExXNY/2/ -->
+<!doctype html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>hello html</title>
+</head>
+<body>
+
+<textarea id="debug" style="width:100%;height:300px"></textarea>
+
+<script>
+    function helloAjax(){
+
+        var req = new XMLHttpRequest();
+
+        //jsfiddle ajax test
+        req.open('get', 'dummy.xml', true);
+
+        req.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8');
+
+        req.onreadystatechange = function() {
+            if(req.readyState==4){
+                if(req.status==200){
+                    document.getElementById('debug').innerHTML = req.responseText ;
+                }
+            }
+
+        }
+
+        req.send("");
+    }
+
+    helloAjax();
+</script>
+</body>
+</html>
