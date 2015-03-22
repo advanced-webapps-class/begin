@@ -4,7 +4,7 @@
 
 ![](http://i.imgur.com/JD660EG.png)
 
-* [기본 소스](assets/dom-quiz-1.html)
+* [기본 소스](assets/quiz-1.html)
 
 
 ## 체스판 DOM 만들기
@@ -12,7 +12,7 @@
 ![체스판](http://i.imgur.com/JGcemvx.png)
 
 * 위 그림과 같은 체스판을 DOM 메소드를 사용하여 생성
-* [기본 소스](assets/dom-quiz-2.html)
+* [기본 소스](assets/quiz-2.html)
 
 
 ## 체스판 이벤트 주기

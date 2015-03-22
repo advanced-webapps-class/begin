@@ -4,19 +4,26 @@
 
 
 
-## 설치
+
+## 프로젝트 따라하기
+
+### 설치
 
 * [Node.js](https://nodejs.org/)
 * [gitbook](https://github.com/GitbookIO/gitbook)
 * [grunt.js](http://gruntjs.com/)
 
-## 로컬환경
+### 로컬환경
 
-  $ git clone git@github.com:niceaji/advanced-webapps-class.git
-  $ cd advanced-webapps-class
-  $ npm install
-  $ npm start
+```
+$ git clone git@github.com:niceaji/advanced-webapps-class.git
+$ cd advanced-webapps-class
+$ npm install
+$ npm start
+```
 
-## gitbook 배포
+### gitbook 배포
 
-  $ grunt deploy
+```
+$ grunt deploy
+```

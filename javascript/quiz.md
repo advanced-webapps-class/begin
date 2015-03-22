@@ -14,3 +14,7 @@
 * prompt()에 값이 없으면 숫자의 합 출력
 * [동작예제](http://www.youtube.com/watch?v=_5dvqecYCco)
 
+***
+
+[풀이코드](assets/quiz-code.js)
+
