@@ -82,7 +82,6 @@ document.body.appendChild(div);
 <body>
 
     <script type="text/javascript" src="test.js"><//script>
-
 </body>
 </html>
 ```

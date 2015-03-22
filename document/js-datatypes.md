@@ -8,15 +8,15 @@ var count = 5;
 
 정수,실수 구분하지 않음
 
-<table>
-<tr><td>Infinity</td><td>무한대를 나타내는 특수한 값</td></tr>
-<tr><td>NaN</td><td>숫자가 아닌 특수한 값</td></tr>
-<tr><td>Number.MAX_VALUE</td><td>표현 가능한 가장 큰 수</td></tr>
-<tr><td>Number.MIN_VALUE</td><td>표현 가능한 (0에 가까운) 가장 작은 수</td></tr>
-<tr><td>Number.NaN</td><td>숫자가 아닌 특수한 값</td></tr>
-<tr><td>Number.POSITIVE_INFOINITY</td><td>양의 무한대를 표현하는 특수한 값</td></tr>
-<tr><td>Number.NEGATIVE_INFINITY</td><td>음의 무한대를 표현하는 특수한 값</td></tr>
-</table>
+|키워드      |    설명 |
+|---------:| -------------|
+|Infinity |무한대를 나타내는 특수한 값 |
+|NaN |숫자가 아닌 특수한 값 |
+|Number.MAX_VALUE |표현 가능한 가장 큰 수값 |
+|Number.MIN_VALUE |표현 가능한 (0에 가까운) 가장 작은 수|
+|Number.NaN |숫자가 아닌 특수한 값 |
+|Number.POSITIVE_INFOINITY |양의 무한대를 표현하는 특수한 값 |
+|Number.NEGATIVE_INFINITY |음의 무한대를 표현하는 특수한 값 |
 
 
 ## 문자열 - String
@@ -98,7 +98,7 @@ var nick = null;
 아무런 값도 나타내지 않는 특수한 키워드
 
 
-## 정의되지않음 - undefined
+## 정의 되지 않음 - undefined
 
 ```javascript
 var nick; //undefined
