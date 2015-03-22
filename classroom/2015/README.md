@@ -28,3 +28,8 @@
 * [김성보](https://github.com/ririthevent)
 * [김태훈](https://github.com/kth9192)
 
+## 과제
+
+1. [frondend-todos](https://github.com/niceaji/frontend-todos/issues/1)레파지토리 만들기
+1.
+
