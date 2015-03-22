@@ -4,7 +4,7 @@
 
 
 * [Book](http://niceaji.github.io/advanced-webapps-class)
-* [ClassRoom](classroom/README.md)
+* [ClassRoom](classroom)
 
 
 ## 프로젝트 따라하기
