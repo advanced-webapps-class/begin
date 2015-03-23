@@ -1,5 +1,8 @@
 # 준비하기
 
+> https://github.com/advanced-webapps-class
+
+
 ## Chrome
 
 ![](http://i.imgur.com/bYSHUdx.png)
@@ -18,8 +21,7 @@
 
 ## git
 
-* https://github.com
-* [todos 따라하기](https://github.com/niceaji/frontend-todos)
+* https://github.com/advanced-webapps-class
 * [window client 설치](https://windows.github.com/)
 * 레파지토리 만들기
 * git commit
