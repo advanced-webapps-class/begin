@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>jsonp</title>
+</head>
+<body>
+<h1>JSONP 예제</h1>
+개발자도구 콘솔확인
+<script>
+    function helloJsonp(){
+
+        var head = document.getElementsByTagName("head")[0];
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'http://api.facebook.com/method/links.getStats?format=json&urls=http://daum.net&callback=complate';
+        document.body.appendChild(script);
+
+    }
+    function complate(data){
+        console.log(data);
+    }
+
+    helloJsonp();
+</script>
+</body>
+</html>

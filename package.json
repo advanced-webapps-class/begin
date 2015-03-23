@@ -1,0 +1,27 @@
+{
+  "name": "advanced-webapps-class",
+  "version": "1.0.0",
+  "description": "> 웹 Front-end 개발 분야의 전문과정을 통한 체계적이고 실질적인 구현 방법을 습득한다",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gitbook serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/niceaji/advanced-webapps-class.git"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "aji",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/niceaji/advanced-webapps-class/issues"
+  },
+  "homepage": "https://github.com/niceaji/advanced-webapps-class",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-gh-pages": "^0.10.0"
+  }
+}
