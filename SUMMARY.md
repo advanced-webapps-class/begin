@@ -11,6 +11,7 @@
   * [스코프](javascript/scope.md)
   * [전역함수](javascript/global-function.md)
   * [퀴즈](javascript/quiz.md)
+  * [도움](javascript/help.md)
 * [javascript Object Model](dom/index.md)
   * [BOM](dom/bom.md)
   * [DOM 메소드](dom/method.md)
