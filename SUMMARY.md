@@ -25,6 +25,12 @@
   * [API](ajax/api.md)
   * [JSON](ajax/json.md)
   * [JSONP](ajax/jsonp.md)
+* [도움자료](helper/index.md)
+  * [슬라이드](helper/slide.md)
+  * [Chrome](helper/chrome.md)
+
+
+
 
 
 
