@@ -26,6 +26,22 @@ for(var prop in obj){
 }
 ```
 
+## while 문
+
+```javascript
+var isClosed = true;
+while(isClosed) {
+
+  //반복코드
+
+  //false로 만들어서 루프종료
+  isClosed = false;
+
+  //루프종료
+  break;
+}
+
+```
 
 ## 함수
 
