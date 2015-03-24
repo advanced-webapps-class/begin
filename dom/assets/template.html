@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <title>tmpl.js</title>
+  <style>
+    .age {
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+
+
+<div id="heroList"></div>
+
+<script type="text/template" id="heroListTemplate">
+<ul>
+  <% for(var i=0; i<list.length; i++) { %>
+  <li><%= list[i].nick %> <small class="age"><%= list[i].age %></small></li>
+  <%} %>
+</ul>
+</script>
+
+<script src="tmpl.js"></script>
+<script>
+
+  //json data
+  var heroList = [
+    {nick: 'hulk', age: '30'},
+    {nick: 'superman', age: '31'},
+    {nick: 'batman', age: '32'},
+  ];
+
+  var template = document.getElementById('heroListTemplate').innerHTML;
+  var html = tmpl(template, {list: heroList});
+
+  document.getElementById('heroList').innerHTML = html;
+
+
+
+</script>
+</body>
+</html>

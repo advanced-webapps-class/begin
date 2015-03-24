@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>template</title>
+</head>
+<body>
+
+<div id="greeting"></div>
+
+<script type="text/template" id="greetingTemplate">
+  <u>Hello~ {nick}</u>
+</script>
+
+
+<script>
+
+  var nick = "hulk";
+
+  var template = document.getElementById('greetingTemplate').innerHTML;
+
+  var helloHtml = template.replace("{nick}", nick);
+
+  document.getElementById('greeting').innerHTML = helloHtml;
+
+</script>
+
+</body>
+</html>
