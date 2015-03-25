@@ -17,45 +17,6 @@ if("test"){  //true 로 자동 변환
 ```
 * [암묵적인 강제형변환과 타입캐스팅](http://www.slideshare.net/senxation/ss-16791882)
 
-## 중첩함수
-
-```javascript
-function sum(){
-  function sum2(x){
-    return x + x;
-  }
-  console.log(sum2(3));
-}
-```
-
-
-## 생략 가능한 전달인자
-
-```javascript
-function sum(x, y){
-    if(!y) y = 1;
-    console.log(x+y);
-}
-```
-
-
-## 가변 길이 전달인자
-
-```javascript
-function sum(){
-  var size = 0;
-  for(var i=0; i < arguments.length; i++){
-      size += arguments[i];
-  }
-
-  console.log(size);
-}
-
-sum(1,2,3,4,5,6,7);
-```
-
-* Arguments 객체로  인자 전달
-* arguments 객체는 Array가 아니다
 
 
 ## 객체를 전달인자로 사용
@@ -73,21 +34,6 @@ area2( {width:300,height:200} );
 ```
 
 전달인자가 많을경우 유용
-
-
-
-
-## 함수 - 프로퍼티와 메소드
-
-```javascript
-function test(x,y){}
-console.log(test.length); //함수가 전달받기 기대하는 인자갯수
-
-//직접 정의도 가능
-test.count = 1; //static
-
-test.prototype;  //prototype객체를 가르킴
-```
 
 
 ## 기본 타입 래퍼 객체

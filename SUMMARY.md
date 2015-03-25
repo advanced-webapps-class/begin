@@ -7,6 +7,7 @@
   * [주요 연산자](javascript/operators.md)
   * [조건문, 반복문](javascript/statements.md)
   * [객체와 배열](javascript/object-array.md)
+  * [함수](javascript/function.md)
   * [특징](javascript/feature.md)
   * [스코프](javascript/scope.md)
   * [전역함수](javascript/global-function.md)
