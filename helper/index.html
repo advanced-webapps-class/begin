@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>전역함수 | Advanced Webapps Class</title>
+        <title>도움자료 | Advanced Webapps Class</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.0-beta.5">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../javascript/quiz.html" />
+    <link rel="next" href="../helper/slide.html" />
     
     
-    <link rel="prev" href="../javascript/scope.html" />
+    <link rel="prev" href="../ajax/jsonp.html" />
     
 
         
@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="2.9" data-basepath=".." data-revision="Wed Mar 25 2015 09:52:27 GMT+0900 (KST)">
+    <div class="book" data-level="5" data-basepath=".." data-revision="Wed Mar 25 2015 09:52:27 GMT+0900 (KST)">
     
 
 <div class="book-summary">
@@ -217,7 +217,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="2.9" data-path="javascript/global-function.html">
+        <li class="chapter " data-level="2.9" data-path="javascript/global-function.html">
             
                 
                     <a href="../javascript/global-function.html">
@@ -474,7 +474,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5" data-path="helper/index.html">
+        <li class="chapter active" data-level="5" data-path="helper/index.html">
             
                 
                     <a href="../helper/index.html">
@@ -618,41 +618,10 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="%EC%A3%BC%EC%9A%94-%EC%A0%84%EC%97%AD%ED%95%A8%EC%88%98">&#xC8FC;&#xC694; &#xC804;&#xC5ED;&#xD568;&#xC218;</h1>
-<h2 id="%EC%9E%90%EC%A3%BC%EC%93%B0%EB%8A%94">&#xC790;&#xC8FC;&#xC4F0;&#xB294;</h2>
-<pre><code class="lang-javascript">alert(<span class="hljs-string">&quot;alert&quot;</span>);
-
-<span class="hljs-keyword">var</span> who = prompt(<span class="hljs-string">&quot;&#xB2F9;&#xC2E0;&#xC740; &#xB204;&#xAD6C;&#xC138;&#xC694;?&quot;</span>);
-
-<span class="hljs-keyword">var</span> isDelete = confirm(<span class="hljs-string">&quot;&#xC815;&#xB9D0; &#xC0AD;&#xC81C;&#xD569;&#xB2C8;&#xAE4C;?&quot;</span>);
-
-<span class="hljs-keyword">var</span> enc = <span class="hljs-built_in">encodeURIComponent</span>(<span class="hljs-string">&quot;&#xB2E4;&#xC74C;&#xCEE4;&#xBBA4;&#xB2C8;&#xCF00;&#xC774;&#xC158;&quot;</span>);
-<span class="hljs-built_in">decodeURIComponent</span>(enc);
-
-<span class="hljs-built_in">isNaN</span>(<span class="hljs-string">&quot;1&quot;</span>); <span class="hljs-comment">//&#xC22B;&#xC790; &#xC5EC;&#xBD80;</span>
-
-<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">&quot;12&quot;</span>);
-<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">&quot;09&quot;</span>, <span class="hljs-number">10</span>); <span class="hljs-comment">//&#xD56D;&#xC0C1; &#xB450;&#xBC88;&#xC9F8; &#xC778;&#xC790; &#xC8FC;&#xB294; &#xC2B5;&#xAD00;</span>
-<span class="hljs-built_in">parseFloat</span>(<span class="hljs-string">&quot;10.33&quot;</span>);
-</code></pre>
-<h2 id="settimeout-%EA%B3%BC-setinterval">setTimeout &#xACFC; setInterval</h2>
-<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">test</span><span class="hljs-params">()</span></span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;test()&quot;</span>);
-}
-
-<span class="hljs-keyword">var</span> id = setTimeout(test, <span class="hljs-number">1000</span>); <span class="hljs-comment">//1&#xCD08;&#xD6C4; 1&#xBC88;&#xC2E4;&#xD589;</span>
-
-<span class="hljs-keyword">var</span> id = setInterval(test, <span class="hljs-number">1000</span>); <span class="hljs-comment">//1&#xCD08;&#xB9C8;&#xB2E4; &#xACC4;&#xC18D; &#xC2E4;&#xD589;</span>
-
-<span class="hljs-comment">//setInterval &#xBCF4;&#xB2E4; &#xB098;&#xC740; &#xBC29;&#xBC95;</span>
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">test</span><span class="hljs-params">()</span></span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;test()&quot;</span>);
-    setTimeout(test, <span class="hljs-number">1000</span>);
-}
-
-<span class="hljs-comment">//clearTimeout(id) ;</span>
-<span class="hljs-comment">//clearInterval(id);</span>
-</code></pre>
+                        <h1 id="%EB%8F%84%EC%9B%80%EC%9E%90%EB%A3%8C-%EB%AA%A8%EC%9D%8C">&#xB3C4;&#xC6C0;&#xC790;&#xB8CC; &#xBAA8;&#xC74C;</h1>
+<blockquote>
+<p>&#xC6F9;&#xAC1C;&#xBC1C; &#xC804;&#xBC18;&#xC5D0; &#xB3C4;&#xC6C0;&#xC774; &#xB420;&#xC218; &#xC788;&#xB294; &#xC11C;&#xBE44;&#xC2A4;,&#xD234;,&#xC2AC;&#xB77C;&#xC774;&#xB4DC; &#xC815;&#xB9AC;</p>
+</blockquote>
 
                     
                     </section>
@@ -663,10 +632,10 @@
         </div>
 
         
-        <a href="../javascript/scope.html" class="navigation navigation-prev " aria-label="Previous page: 스코프"><i class="fa fa-angle-left"></i></a>
+        <a href="../ajax/jsonp.html" class="navigation navigation-prev " aria-label="Previous page: JSONP"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../javascript/quiz.html" class="navigation navigation-next " aria-label="Next page: 퀴즈"><i class="fa fa-angle-right"></i></a>
+        <a href="../helper/slide.html" class="navigation navigation-next " aria-label="Next page: 슬라이드"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
