@@ -25,7 +25,7 @@
 //
 //}
 
-//문제 2
+//prompt() 문제
 var num, total = 0;
 
 for(var isEnd = false; isEnd === false; ){
