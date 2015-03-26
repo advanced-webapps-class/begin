@@ -1,6 +1,6 @@
 # 주요 연산자
 
-> [모든 연산자](http://goo.gl/2lPsgk)
+> [모든 연산자](http://goo.gl/IKp7AB)
 
 
 ## 연산자
@@ -32,6 +32,34 @@ null         ==   undefined     // true
 
 * ==  동등,  != 부등   : 비권장
 * **=== 일치, !== 불일치**
+
+### 논리곱 - and
+
+```javascript
+if( isHero && isHulk ) {
+  //둘다 참일경우 실행
+}
+```
+* 두 식이 모두 true이면 result는 true
+* 두 식 중 하나가 false인 경우 false를 반환
+
+### 논리합 - or
+
+```javascript
+if( isHero || isHulk ) {
+  //하나라도 참일경우 실행
+}
+```
+
+* 두 식 중 하나가 true이면 true 반환
+
+### 논리부정 - !
+
+```javascript
+if( !isHero ) {
+  //영웅이 아니라면
+}
+```
 
 
 ### in
