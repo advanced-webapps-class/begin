@@ -5,6 +5,7 @@
 
 * [Book](https://advanced-webapps-class.github.io/front-end-start/)
 * [Classroom](https://github.com/advanced-webapps-class/classroom)
+* [이전 문서 참고](http://niceaji.github.io/javascript-study/)
 
 
 ## 프로젝트 따라하기
