@@ -3,9 +3,9 @@
 ```javascript
 var req = new XMLHttpRequest();
 
-req.open('POST', '/echo/html/', true);
+req.open('POST', 'dummy.xml', true);
 
-req.send("html=hello Ajax");
+req.send();
 
 req.onreadystatechange=function(){
 
