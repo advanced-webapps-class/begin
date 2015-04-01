@@ -14,7 +14,7 @@
         var script = document.createElement('script');
         script.type = 'text/javascript';
         script.src = 'http://api.facebook.com/method/links.getStats?format=json&urls=http://daum.net&callback=complate';
-        document.body.appendChild(script);
+        head.appendChild(script);
 
     }
     function complate(data){

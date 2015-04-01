@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="kr">
+<head>
+  <meta charset="UTF-8">
+  <title>ajax.js</title>
+</head>
+<body>
+개발자도구 확인
+<script src="ajax.js"></script>
+<script>
+  ajax('dummy.json', function(responseText){
+
+    console.log(responseText);
+    console.log(JSON.parse(responseText));
+  });
+</script>
+</body>
+</html>
