@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+  <meta charset=utf-8 />
+  <title>jQuery - 이벤트전파방지, 기본동작막기 </title>
+
+  <style id="jsbin-css">
+    div {border:1px solid #000;margin:10px;padding:10px}
+    a {background-color:#eee}
+  </style>
+</head>
+<body>
+<div id="wrap">
+  <div id="box">event test</div>
+  <a id="link" href="http://www.daum.net">Daum으로 가기</a>
+</div>
+
+<div id="debug"></div>
+<script>
+  $('#wrap').click(function(){
+
+    $('#debug').append("#wrap click!<br>");
+  });
+
+
+  $('#box').click(function(event){
+
+    $('#debug').append("#box click!<br>");
+
+    //없을경우 #wrap click도 발생
+    event.stopPropagation();
+
+  });
+
+  $('#link').click(function(event){
+
+    $('#debug').append("#link click!<br>");
+
+    //없을경우 #wrap click도 발생
+    event.stopPropagation();
+
+    //없을경우 daum.net으로 이동
+    event.preventDefault();
+
+
+//   return false;
+  });
+</script>
+
+</body>
+</html>
