@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>이벤트 | Advanced Webapps Class</title>
+        <title>jQuery | Advanced Webapps Class</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.0-beta.5">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../dom/content-loaded.html" />
+    <link rel="next" href="../jquery/hello.html" />
     
     
-    <link rel="prev" href="../dom/method.html" />
+    <link rel="prev" href="../ajax/quiz-openapi.html" />
     
 
         
@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="3.3" data-basepath=".." data-revision="Tue Apr 21 2015 20:58:43 GMT+0900 (KST)">
+    <div class="book" data-level="5" data-basepath=".." data-revision="Tue Apr 21 2015 20:58:43 GMT+0900 (KST)">
     
 
 <div class="book-summary">
@@ -313,7 +313,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.3" data-path="dom/event.html">
+        <li class="chapter " data-level="3.3" data-path="dom/event.html">
             
                 
                     <a href="../dom/event.html">
@@ -555,7 +555,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5" data-path="jquery/index.html">
+        <li class="chapter active" data-level="5" data-path="jquery/index.html">
             
                 
                     <a href="../jquery/index.html">
@@ -900,69 +900,17 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="event">Event</h1>
+                        <h1 id="jquery">jQuery</h1>
+<blockquote>
+<p>&#xAC00;&#xC7A5; &#xB9CE;&#xC774; &#xC0AC;&#xC6A9;&#xB418;&#xB294; JS &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;</p>
+</blockquote>
 <ul>
-<li>&#xBB38;&#xC11C;&#xC5D0;&#xC11C; Element&#xC5D0; &#xBCC0;&#xD654;&#xAC00; &#xC0DD;&#xAE30;&#xBA74;&#xC11C; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xBAA8;&#xB4E0; &#xC0AC;&#xAC74;</li>
-<li>&#xC774;&#xBCA4;&#xD2B8;&#xD0C0;&#xC785;: click, mouseover, load, mouseout, unload, change,submit, focus, blur, error, keypress,DOMContentLoaded,touchstart ..</li>
-<li><a href="https://developer.mozilla.org/en/DOM/DOM_event_reference" target="_blank">Mozilla event reference</a></li>
+<li>&#xD06C;&#xB85C;&#xC2A4;&#xBE0C;&#xB77C;&#xC6B0;&#xC9D5; &#xBB38;&#xC81C;&#xB97C; &#xC27D;&#xAC8C; &#xD574;&#xACB0; &#xAC00;&#xB2A5;</li>
+<li><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+<li><a href="https://github.com/jquery/jquery" target="_blank">&#xC624;&#xD508;&#xC18C;&#xC2A4;</a></li>
+<li><a href="https://plugins.jquery.com/" target="_blank">&#xB9CE;&#xC740; &#xAD00;&#xB828; &#xB77C;&#xC774;&#xBE0C;&#xB7EC;&#xB9AC;</a></li>
+<li><a href="http://www.google.com/trends/explore#q=jquery,prototype,script.aculo.us,yui,dojo,extjs,gwt,mootools," target="_blank">&#xAD6C;&#xAE00; &#xD2B8;&#xB80C;&#xB4DC;</a></li>
 </ul>
-<h2 id="event-%EB%93%B1%EB%A1%9D-%EB%B0%A9%EB%B2%95">Event &#xB4F1;&#xB85D; &#xBC29;&#xBC95;</h2>
-<pre><code class="lang-javascript"><span class="hljs-comment">//&#xC778;&#xB77C;&#xC778;</span>
-&lt;body onload=<span class="hljs-string">&quot;alert(1)&quot;</span>&gt;
-
-<span class="hljs-comment">//&#xD504;&#xB85C;&#xD37C;&#xD2F0;&#xB85C; &#xC8FC;&#xAE30;</span>
-<span class="hljs-built_in">window</span>.load=<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
-    alert(<span class="hljs-string">&quot;load&quot;</span>);
-};
-
-<span class="hljs-comment">//DOM &#xB808;&#xBCA8;2</span>
-<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;load&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
-    alert(<span class="hljs-string">&quot;load&quot;</span>);
-});
-</code></pre>
-<ul>
-<li>DOM &#xB808;&#xBCA8;2 &#xAD8C;&#xC7A5;</li>
-<li>IE&#xC5D0;&#xC11C;&#xB294; &#xB3C5;&#xC790;&#xC801;&#xC778; &#xBAA8;&#xB378; &#xAD6C;&#xD604;</li>
-<li><a href="http://jsfiddle.net/niceaji/kcbke/" target="_blank">&#xD06C;&#xB85C;&#xC2A4;&#xBE0C;&#xB77C;&#xC6B0;&#xC9D5; &#xAD6C;&#xD604;</a></li>
-</ul>
-<h2 id="%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%93%B1%EB%A1%9D-%EC%A0%9C%EA%B1%B0">&#xC774;&#xBCA4;&#xD2B8; &#xB4F1;&#xB85D;,&#xC81C;&#xAC70;</h2>
-<ul>
-<li><a href="https://developer.mozilla.org/en/DOM/element.addEventListener" target="_blank">addEventListener()</a></li>
-<li><a href="https://developer.mozilla.org/en/DOM/element.removeEventListener" target="_blank">removeEventListener()</a></li>
-</ul>
-<h2 id="methods-properties">Methods, Properties</h2>
-<ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/DOM/event#Methods" target="_blank">&#xBA54;&#xC18C;&#xB4DC;</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/DOM/event#Properties" target="_blank">&#xD504;&#xB85C;&#xD37C;&#xD2F0;</a></li>
-</ul>
-<h2 id="callback-%ED%95%A8%EC%88%98">Callback &#xD568;&#xC218;</h2>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> clickCount = <span class="hljs-number">0</span>;
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">popup</span><span class="hljs-params">(event)</span></span>{
-    <span class="hljs-built_in">console</span>.log(++clickCount);
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">arguments</span>, <span class="hljs-keyword">this</span> ,event ,event.type,event.currentTarget);
-}
-<span class="hljs-built_in">document</span>.body.addEventListener(<span class="hljs-string">&apos;click&apos;</span>, popup);
-
-<span class="hljs-built_in">document</span>.body.addEventListener(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;click&quot;</span>);
-});
-</code></pre>
-<ul>
-<li>&#xD2B9;&#xC815; &#xB3D9;&#xC791;(&#xC774;&#xBCA4;&#xD2B8;)&#xB4F1;&#xC774; &#xC644;&#xB8CC;&#xD6C4;&#xC5D0; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xD568;&#xC218;</li>
-<li>this, event.currentTarget : &#xC774;&#xBCA4;&#xD2B8; &#xCC98;&#xB9AC;&#xAE30;&#xAC00; &#xB4F1;&#xB85D;&#xB41C; &#xAC1D;&#xCCB4;</li>
-</ul>
-<h2 id="%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EC%A0%84%ED%8C%8C">&#xC774;&#xBCA4;&#xD2B8; &#xC804;&#xD30C;</h2>
-<p><img src="http://i.imgur.com/yFv5hSy.png" alt=""></p>
-<ul>
-<li>&#xCEA1;&#xCCD0;,&#xBC84;&#xBE14;</li>
-<li><a href="http://jsfiddle.net/niceaji/Ve9zd/" target="_blank">&#xC608;&#xC81C;</a></li>
-</ul>
-<h2 id="%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EC%A0%84%ED%8C%8C-%EC%A4%91%EC%A7%80">&#xC774;&#xBCA4;&#xD2B8; &#xC804;&#xD30C; &#xC911;&#xC9C0;</h2>
-<p><a href="http://jsfiddle.net/niceaji/FHmBE/" target="_blank">&#xC608;&#xC81C;</a></p>
-<pre><code class="lang-javascript">event.stopPropagation(); <span class="hljs-comment">// &#xC774;&#xBCA4;&#xD2B8; &#xC804;&#xD30C; &#xC911;&#xC9C0;</span>
-
-event.preventDefault(); <span class="hljs-comment">// &#xAE30;&#xBCF8; &#xD589;&#xB3D9; &#xC911;&#xC9C0;</span>
-</code></pre>
 
                     
                     </section>
@@ -973,10 +921,10 @@ event.preventDefault(); <span class="hljs-comment">// &#xAE30;&#xBCF8; &#xD589;&
         </div>
 
         
-        <a href="../dom/method.html" class="navigation navigation-prev " aria-label="Previous page: DOM 메소드"><i class="fa fa-angle-left"></i></a>
+        <a href="../ajax/quiz-openapi.html" class="navigation navigation-prev " aria-label="Previous page: 퀴즈-오픈API"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../dom/content-loaded.html" class="navigation navigation-next " aria-label="Next page: DOMContentLoaded"><i class="fa fa-angle-right"></i></a>
+        <a href="../jquery/hello.html" class="navigation navigation-next " aria-label="Next page: 사용 시작하기"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

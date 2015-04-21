@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>이벤트 | Advanced Webapps Class</title>
+        <title>Effects | Advanced Webapps Class</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.0-beta.5">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../dom/content-loaded.html" />
+    <link rel="next" href="../jquery/event.html" />
     
     
-    <link rel="prev" href="../dom/method.html" />
+    <link rel="prev" href="../jquery/dom-insertion.html" />
     
 
         
@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="3.3" data-basepath=".." data-revision="Tue Apr 21 2015 20:58:43 GMT+0900 (KST)">
+    <div class="book" data-level="5.8" data-basepath=".." data-revision="Tue Apr 21 2015 20:58:43 GMT+0900 (KST)">
     
 
 <div class="book-summary">
@@ -313,7 +313,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.3" data-path="dom/event.html">
+        <li class="chapter " data-level="3.3" data-path="dom/event.html">
             
                 
                     <a href="../dom/event.html">
@@ -676,7 +676,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.8" data-path="jquery/effects.html">
+        <li class="chapter active" data-level="5.8" data-path="jquery/effects.html">
             
                 
                     <a href="../jquery/effects.html">
@@ -900,69 +900,65 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="event">Event</h1>
-<ul>
-<li>&#xBB38;&#xC11C;&#xC5D0;&#xC11C; Element&#xC5D0; &#xBCC0;&#xD654;&#xAC00; &#xC0DD;&#xAE30;&#xBA74;&#xC11C; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xBAA8;&#xB4E0; &#xC0AC;&#xAC74;</li>
-<li>&#xC774;&#xBCA4;&#xD2B8;&#xD0C0;&#xC785;: click, mouseover, load, mouseout, unload, change,submit, focus, blur, error, keypress,DOMContentLoaded,touchstart ..</li>
-<li><a href="https://developer.mozilla.org/en/DOM/DOM_event_reference" target="_blank">Mozilla event reference</a></li>
-</ul>
-<h2 id="event-%EB%93%B1%EB%A1%9D-%EB%B0%A9%EB%B2%95">Event &#xB4F1;&#xB85D; &#xBC29;&#xBC95;</h2>
-<pre><code class="lang-javascript"><span class="hljs-comment">//&#xC778;&#xB77C;&#xC778;</span>
-&lt;body onload=<span class="hljs-string">&quot;alert(1)&quot;</span>&gt;
-
-<span class="hljs-comment">//&#xD504;&#xB85C;&#xD37C;&#xD2F0;&#xB85C; &#xC8FC;&#xAE30;</span>
-<span class="hljs-built_in">window</span>.load=<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
-    alert(<span class="hljs-string">&quot;load&quot;</span>);
-};
-
-<span class="hljs-comment">//DOM &#xB808;&#xBCA8;2</span>
-<span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">&apos;load&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
-    alert(<span class="hljs-string">&quot;load&quot;</span>);
-});
+                        <h1 id="%EC%86%90%EC%89%AC%EC%9A%B4-%EC%97%90%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98-%ED%9A%A8%EA%B3%BC">&#xC190;&#xC26C;&#xC6B4; &#xC5D0;&#xB2C8;&#xBA54;&#xC774;&#xC158; &#xD6A8;&#xACFC;</h1>
+<p><a href="http://api.jquery.com/category/effects/" target="_blank">API</a></p>
+<h2 id="-hide">.hide()</h2>
+<p>&#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8;&#xB97C; &#xC228;&#xAE34;&#xB2E4;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// $(&apos;div&apos;).css(&quot;display&quot;,&quot;none&quot;) &#xACFC; &#xB3D9;&#xC77C;</span>
+$(<span class="hljs-string">&apos;div&apos;</span>).hide()
+<span class="hljs-comment">//&#xCC9C;&#xCC9C;&#xD788; &#xC0AC;&#xB77C;&#xC9C0;&#xAC8C;</span>
+$(<span class="hljs-string">&apos;div&apos;</span>).hide(<span class="hljs-string">&apos;slow&apos;</span>,<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{ <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;hide ok!&apos;</span>) });
 </code></pre>
-<ul>
-<li>DOM &#xB808;&#xBCA8;2 &#xAD8C;&#xC7A5;</li>
-<li>IE&#xC5D0;&#xC11C;&#xB294; &#xB3C5;&#xC790;&#xC801;&#xC778; &#xBAA8;&#xB378; &#xAD6C;&#xD604;</li>
-<li><a href="http://jsfiddle.net/niceaji/kcbke/" target="_blank">&#xD06C;&#xB85C;&#xC2A4;&#xBE0C;&#xB77C;&#xC6B0;&#xC9D5; &#xAD6C;&#xD604;</a></li>
-</ul>
-<h2 id="%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EB%93%B1%EB%A1%9D-%EC%A0%9C%EA%B1%B0">&#xC774;&#xBCA4;&#xD2B8; &#xB4F1;&#xB85D;,&#xC81C;&#xAC70;</h2>
-<ul>
-<li><a href="https://developer.mozilla.org/en/DOM/element.addEventListener" target="_blank">addEventListener()</a></li>
-<li><a href="https://developer.mozilla.org/en/DOM/element.removeEventListener" target="_blank">removeEventListener()</a></li>
-</ul>
-<h2 id="methods-properties">Methods, Properties</h2>
-<ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/DOM/event#Methods" target="_blank">&#xBA54;&#xC18C;&#xB4DC;</a></li>
-<li><a href="https://developer.mozilla.org/en-US/docs/DOM/event#Properties" target="_blank">&#xD504;&#xB85C;&#xD37C;&#xD2F0;</a></li>
-</ul>
-<h2 id="callback-%ED%95%A8%EC%88%98">Callback &#xD568;&#xC218;</h2>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> clickCount = <span class="hljs-number">0</span>;
-<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">popup</span><span class="hljs-params">(event)</span></span>{
-    <span class="hljs-built_in">console</span>.log(++clickCount);
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">arguments</span>, <span class="hljs-keyword">this</span> ,event ,event.type,event.currentTarget);
-}
-<span class="hljs-built_in">document</span>.body.addEventListener(<span class="hljs-string">&apos;click&apos;</span>, popup);
-
-<span class="hljs-built_in">document</span>.body.addEventListener(<span class="hljs-string">&apos;click&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
-    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;click&quot;</span>);
-});
+<h2 id="-show">.show()</h2>
+<p>&#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8;&#xB97C; &#xBCF4;&#xC5EC;&#xC900;&#xB2E4;</p>
+<pre><code class="lang-javascript">$(<span class="hljs-string">&apos;div&apos;</span>).show()
+$(<span class="hljs-string">&apos;div&apos;</span>).show(<span class="hljs-string">&apos;fast&apos;</span>)
 </code></pre>
-<ul>
-<li>&#xD2B9;&#xC815; &#xB3D9;&#xC791;(&#xC774;&#xBCA4;&#xD2B8;)&#xB4F1;&#xC774; &#xC644;&#xB8CC;&#xD6C4;&#xC5D0; &#xBC1C;&#xC0DD;&#xD558;&#xB294; &#xD568;&#xC218;</li>
-<li>this, event.currentTarget : &#xC774;&#xBCA4;&#xD2B8; &#xCC98;&#xB9AC;&#xAE30;&#xAC00; &#xB4F1;&#xB85D;&#xB41C; &#xAC1D;&#xCCB4;</li>
-</ul>
-<h2 id="%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EC%A0%84%ED%8C%8C">&#xC774;&#xBCA4;&#xD2B8; &#xC804;&#xD30C;</h2>
-<p><img src="http://i.imgur.com/yFv5hSy.png" alt=""></p>
-<ul>
-<li>&#xCEA1;&#xCCD0;,&#xBC84;&#xBE14;</li>
-<li><a href="http://jsfiddle.net/niceaji/Ve9zd/" target="_blank">&#xC608;&#xC81C;</a></li>
-</ul>
-<h2 id="%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EC%A0%84%ED%8C%8C-%EC%A4%91%EC%A7%80">&#xC774;&#xBCA4;&#xD2B8; &#xC804;&#xD30C; &#xC911;&#xC9C0;</h2>
-<p><a href="http://jsfiddle.net/niceaji/FHmBE/" target="_blank">&#xC608;&#xC81C;</a></p>
-<pre><code class="lang-javascript">event.stopPropagation(); <span class="hljs-comment">// &#xC774;&#xBCA4;&#xD2B8; &#xC804;&#xD30C; &#xC911;&#xC9C0;</span>
-
-event.preventDefault(); <span class="hljs-comment">// &#xAE30;&#xBCF8; &#xD589;&#xB3D9; &#xC911;&#xC9C0;</span>
+<h2 id="-toggle">.toggle()</h2>
+<p>&#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8; show(),hide() &#xB97C; toggle &#xCC98;&#xB9AC;</p>
+<pre><code class="lang-javascript">$(<span class="hljs-string">&apos;div&apos;</span>).toggle(<span class="hljs-string">&apos;fast&apos;</span>)
 </code></pre>
+<h2 id="-fadeout">.fadeOut()</h2>
+<p>&#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8;&#xAC00; opacity&#xAC12;&#xC774; &#xBE60;&#xC9C0;&#xBA74;&#xC11C; &#xC0AC;&#xB77C;&#xC9C4;&#xB2E4;</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">//&#xBAA8;&#xB4E0; &#xD0DC;&#xADF8; &#xC0AC;&#xB77C;&#xC9D0; </span>
+$(<span class="hljs-string">&apos;*&apos;</span>).fadeOut()
+</code></pre>
+<h2 id="-fadein">.fadeIn()</h2>
+<p>&#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8;&#xAC00; opacity&#xAC12;&#xC774; &#xCC44;&#xC6CC;&#xC9C0;&#xBA74;&#xC11C; &#xB098;&#xD0C0;&#xB0A8;</p>
+<pre><code class="lang-javascript">$(<span class="hljs-string">&apos;*&apos;</span>).fadeIn(<span class="hljs-string">&apos;fast&apos;</span>)
+</code></pre>
+<h2 id="-fadeto">.fadeTo()</h2>
+<p>&#xB450;&#xBC88;&#xC9F8; &#xC778;&#xC790;&#xB85C; &#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8;&#xC758; opacity&#xB97C; &#xACB0;&#xC815;&#xD55C;&#xB2E4;</p>
+<pre><code class="lang-javascript">$(<span class="hljs-string">&apos;*&apos;</span>).fadeTo(<span class="hljs-string">&apos;slow&apos;</span>, <span class="hljs-number">0.3</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{ <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;done&apos;</span>) })
+</code></pre>
+<h2 id="-fadetoggle">.fadeToggle()</h2>
+<p>fadeIn(), fadeOut() toggle</p>
+<h2 id="-slideup">.slideUp()</h2>
+<p>&#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8;&#xB97C; &#xC2AC;&#xB77C;&#xC774;&#xB4DC;&#xAC00; &#xC62C;&#xB77C;&#xAC00;&#xB294; &#xD615;&#xD0DC;&#xB85C; &#xC228;&#xAE34;&#xB2E4;</p>
+<pre><code class="lang-javascript">$(<span class="hljs-string">&apos;#box&apos;</span>).slideUp();
+</code></pre>
+<h2 id="-slidedown">.slideDown()</h2>
+<p>&#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8;&#xB97C; &#xBC11;&#xC73C;&#xB85C; &#xC2AC;&#xB77C;&#xC774;&#xB4DC; &#xD3BC;&#xCCD0;&#xC9C0;&#xB294; &#xD615;&#xD0DC;&#xB85C; &#xBCF4;&#xC5EC;&#xC900;&#xB2E4;</p>
+<pre><code class="lang-javascript">$(<span class="hljs-string">&apos;#box&apos;</span>).slideDown();
+</code></pre>
+<h2 id="-slidetoggle">.slideToggle()</h2>
+<p>slideDown(), slideUp() toggle</p>
+<h2 id="-animate">.animate()</h2>
+<p>&#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8; CSS&#xC18D;&#xC131;&#xC5D0; &#xC5D0;&#xB2C8;&#xBA54;&#xC774;&#xC158; &#xD6A8;&#xACFC;&#xB97C; &#xC801;&#xC6A9;&#xD558;&#xC5EC; &#xBCC0;&#xACBD;&#xD55C;&#xB2E4;. <a href="http://api.jquery.com/animate/" target="_blank">API &#xCC38;&#xACE0;</a></p>
+<pre><code class="lang-javascript">$(<span class="hljs-string">&apos;#ani&apos;</span>).animate({ 
+    <span class="hljs-string">&apos;background-color&apos;</span> : <span class="hljs-string">&apos;#ff0000&apos;</span>,
+    <span class="hljs-string">&apos;top&apos;</span> : <span class="hljs-string">&apos;200&apos;</span>,
+    <span class="hljs-string">&apos;left&apos;</span> : <span class="hljs-string">&apos;500&apos;</span>,
+    <span class="hljs-string">&apos;width&apos;</span> : <span class="hljs-number">200</span>
+},<span class="hljs-number">5000</span>, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;animate end!&apos;</span>);
+})
+</code></pre>
+<h2 id="-delay">.delay()</h2>
+<p>&#xC9C0;&#xC5F0; &#xD0C0;&#xC774;&#xBA38;&#xB97C; &#xC124;&#xC815;</p>
+<pre><code class="lang-javascript">$(<span class="hljs-string">&apos;#box&apos;</span>).slideUp(<span class="hljs-number">300</span>).delay(<span class="hljs-number">800</span>).fadeIn(<span class="hljs-number">400</span>)
+</code></pre>
+<p>&#xC774; &#xC678;&#xC5D0;&#xB3C4; &#xD604;&#xC7AC; &#xB3D9;&#xC791;&#xC911;&#xC778; &#xBAA8;&#xB4E0; &#xC5D0;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC744; &#xBA48;&#xCD98;&#xB2E4;&#xB4E0;&#xAC00; (<a href="http://api.jquery.com/jQuery.fx.off/" target="_blank">jQuery.fx.off</a>), &#xC5D0;&#xB2C8;&#xBA54;&#xC774;&#xC158;&#xC758; framerate&#xB97C; &#xBCC0;&#xACBD; &#xD558;&#xB294;(<a href="http://api.jquery.com/jQuery.fx.interval/" target="_blank">jQuery.fx.interval</a>) &#xB4F1;&#xC758; &#xC804;&#xC5ED;&#xBCC0;&#xC218;&#xB4E4;&#xB3C4; &#xCC38;&#xACE0;</p>
 
                     
                     </section>
@@ -973,10 +969,10 @@ event.preventDefault(); <span class="hljs-comment">// &#xAE30;&#xBCF8; &#xD589;&
         </div>
 
         
-        <a href="../dom/method.html" class="navigation navigation-prev " aria-label="Previous page: DOM 메소드"><i class="fa fa-angle-left"></i></a>
+        <a href="../jquery/dom-insertion.html" class="navigation navigation-prev " aria-label="Previous page: DOM 집어넣기"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../dom/content-loaded.html" class="navigation navigation-next " aria-label="Next page: DOMContentLoaded"><i class="fa fa-angle-right"></i></a>
+        <a href="../jquery/event.html" class="navigation navigation-next " aria-label="Next page: 이벤트"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
