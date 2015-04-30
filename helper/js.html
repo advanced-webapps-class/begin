@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>Attributes 메소드 | Advanced Webapps Class</title>
+        <title>자바스크립트 관련 | Advanced Webapps Class</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.0-beta.5">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../jquery/rule.html" />
+    <link rel="next" href="../helper/slide.html" />
     
     
-    <link rel="prev" href="../jquery/css.html" />
+    <link rel="prev" href="../helper/index.html" />
     
 
         
@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="5.5" data-basepath=".." data-revision="Thu Apr 30 2015 13:22:29 GMT+0900 (KST)">
+    <div class="book" data-level="7.1" data-basepath=".." data-revision="Thu Apr 30 2015 13:22:29 GMT+0900 (KST)">
     
 
 <div class="book-summary">
@@ -631,7 +631,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="5.5" data-path="jquery/attributes.html">
+        <li class="chapter " data-level="5.5" data-path="jquery/attributes.html">
             
                 
                     <a href="../jquery/attributes.html">
@@ -787,7 +787,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="7.1" data-path="helper/js.html">
+        <li class="chapter active" data-level="7.1" data-path="helper/js.html">
             
                 
                     <a href="../helper/js.html">
@@ -930,57 +930,12 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="attributes-%EB%A9%94%EC%86%8C%EB%93%9C">Attributes &#xBA54;&#xC18C;&#xB4DC;</h1>
-<p><a href="http://api.jquery.com/category/attributes/" target="_blank">API</a></p>
-<h3 id="-addclass">.addClass()</h3>
-<p>&#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8;&#xC5D0; css&#xD074;&#xB798;&#xC2A4;&#xBA85;&#xC744; &#xCD94;&#xAC00;&#xD560;&#xB54C; &#xC0AC;&#xC6A9;</p>
-<pre><code class="lang-javascript">$(<span class="hljs-string">&apos;#box&apos;</span>).addClass(<span class="hljs-string">&apos;red&apos;</span>);
-
-<span class="hljs-comment">//&#xBAA8;&#xB4E0; div&#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8;&#xC5D0; border &#xD074;&#xB798;&#xC2A4; &#xCD94;&#xAC00;</span>
-$(<span class="hljs-string">&apos;div&apos;</span>).addClass(<span class="hljs-string">&apos;border&apos;</span>);
-</code></pre>
-<h3 id="-removeclass">.removeClass()</h3>
-<p>&#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8;&#xC5D0; css&#xD074;&#xB798;&#xC2A4;&#xBA85;&#xC744; &#xC81C;&#xAC70;</p>
-<pre><code class="lang-javascript">$(<span class="hljs-string">&apos;#box&apos;</span>).removeClass(<span class="hljs-string">&apos;red&apos;</span>);
-$(<span class="hljs-string">&apos;div&apos;</span>).removeClass(<span class="hljs-string">&apos;border&apos;</span>);
-</code></pre>
-<h3 id="-hasclass">.hasClass()</h3>
-<p>&#xD074;&#xB798;&#xC2A4;&#xBA85;&#xC758; &#xC874;&#xC7AC;&#xC5EC;&#xBD80;&#xB97C; true,false &#xB85C; &#xB9AC;&#xD134;</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">if</span>($(<span class="hljs-string">&apos;#box&apos;</span>).hasClass(<span class="hljs-string">&apos;red&apos;</span>)){
-  $(<span class="hljs-string">&apos;#box&apos;</span>).removeClass(<span class="hljs-string">&apos;red&apos;</span>); 
-}
-</code></pre>
-<h3 id="-toggleclass">.toggleClass()</h3>
-<p>&#xC778;&#xC790;&#xB85C; &#xC8FC;&#xC5B4;&#xC9C0;&#xB294; &#xD074;&#xB798;&#xC2A4;&#xBA85;&#xC774; toggle </p>
-<pre><code class="lang-javascript">$(<span class="hljs-string">&apos;#box&apos;</span>).toggleClass(<span class="hljs-string">&apos;red&apos;</span>);
-</code></pre>
-<h2 id="-attr">.attr()</h2>
-<p>&#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8;&#xC5D0; &#xC788;&#xB294; &#xC5B4;&#xD2B8;&#xB9AC;&#xBDF0;&#xD2B8;&#xB97C; &#xC77D;&#xAC70;&#xB098; &#xC138;&#xD305;&#xD560;&#xB54C; &#xC0AC;&#xC6A9;&#xB41C;&#xB2E4;.</p>
-<pre><code class="lang-javascript">$(<span class="hljs-string">&apos;#box&apos;</span>).attr(<span class="hljs-string">&apos;data&apos;</span>,<span class="hljs-string">&apos;i am box&apos;</span>);
-$(<span class="hljs-string">&apos;#box&apos;</span>).attr(<span class="hljs-string">&apos;data&apos;</span>); <span class="hljs-comment">//i am box &#xCD9C;&#xB825;</span>
-</code></pre>
-<h2 id="-removeattr">.removeAttr()</h2>
-<p>&#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8;&#xC5D0; &#xC788;&#xB294; &#xC5B4;&#xD2B8;&#xB9AC;&#xBDF0;&#xD2B8; &#xC81C;&#xAC70;</p>
-<pre><code class="lang-javascript">$(<span class="hljs-string">&apos;#box&apos;</span>).removeAttr(<span class="hljs-string">&apos;data&apos;</span>);
-</code></pre>
-<h2 id="-html">.html()</h2>
-<p>&#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8;&#xC758; &#xB0B4;&#xC6A9;&#xC744; html&#xD615;&#xD0DC;&#xB85C; &#xAC00;&#xC9C0;&#xACE0; &#xC624;&#xB358;&#xAC00; &#xC138;&#xD305;&#xD55C;&#xB2E4;</p>
-<pre><code class="lang-javascript">$(<span class="hljs-string">&apos;#box&apos;</span>).html(); <span class="hljs-comment">// id=box</span>
-$(<span class="hljs-string">&apos;#box&apos;</span>).html(<span class="hljs-string">&apos;hello box&apos;</span>);
-</code></pre>
-<h2 id="-prop">.prop()</h2>
-<p>&#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8;&#xC758; &#xD504;&#xB85C;&#xD37C;&#xD2F0;&#xC5D0; &#xC9C1;&#xC811; &#xC811;&#xADFC;&#xD558;&#xC5EC; &#xAC12;&#xC744; &#xAC00;&#xC838;&#xC624;&#xAC70;&#xB098; &#xC138;&#xD305;&#xD55C;&#xB2E4;</p>
-<pre><code class="lang-javascript">$(<span class="hljs-string">&quot;input[type=&apos;checkbox&apos;]&quot;</span>).attr(<span class="hljs-string">&quot;checked&quot;</span>) <span class="hljs-comment">// checked</span>
-$(<span class="hljs-string">&quot;input[type=&apos;checkbox&apos;]&quot;</span>).prop(<span class="hljs-string">&quot;checked&quot;</span>) <span class="hljs-comment">// true</span>
-$(<span class="hljs-string">&quot;input&quot;</span>).prop(<span class="hljs-string">&quot;disabled&quot;</span>, <span class="hljs-literal">true</span>) <span class="hljs-comment">// &#xD3FC;&#xC694;&#xC18C;&#xB97C; &#xC0AC;&#xC6A9;&#xD558;&#xC9C0; &#xBABB;&#xD558;&#xAC8C; &#xC138;&#xD305;</span>
-$(<span class="hljs-string">&quot;input&quot;</span>).prop({<span class="hljs-string">&quot;disabled&quot;</span>: <span class="hljs-literal">false</span>}) <span class="hljs-comment">//&#xC778;&#xC790;&#xB97C; object &#xD615;&#xD0DC;&#xB85C;&#xB3C4; &#xC804;&#xB2EC; &#xAC00;&#xB2A5;</span>
-</code></pre>
-<h2 id="-removeprop">.removeProp()</h2>
-<p>&#xD504;&#xB85C;&#xD37C;&#xD2F0;&#xB97C; &#xC81C;&#xAC70;</p>
-<h2 id="-val">.val()</h2>
-<p>value &#xC5B4;&#xD2B8;&#xB9AC;&#xBDF0;&#xD2B8;&#xAC00; &#xC788;&#xB294; &#xC5D8;&#xB9AC;&#xBA3C;&#xD2B8;&#xC5D0;&#xC11C; value&#xAC12;&#xC744; &#xAC00;&#xC838;&#xC628;&#xB2E4;</p>
-<pre><code class="lang-javascript">$(<span class="hljs-string">&apos;input[type=text]&apos;</span>).val()
-</code></pre>
+                        <h1 id="%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EA%B4%80%EB%A0%A8-%EA%B8%80">&#xC790;&#xBC14;&#xC2A4;&#xD06C;&#xB9BD;&#xD2B8; &#xAD00;&#xB828; &#xAE00;</h1>
+<ul>
+<li><a href="http://r2fresh.tumblr.com/post/72532030080/45-useful-javascript-tips" target="_blank">45 Useful Javascript Tips</a></li>
+<li><a href="http://bonsaiden.github.io/JavaScript-Garden/ko/" target="_blank">JavaScript Garden</a></li>
+<li><a href="http://helloworld.naver.com/helloworld/textyle/12864" target="_blank">JavaScript &#xD45C;&#xC900;&#xC744; &#xC704;&#xD55C; &#xC6C0;&#xC9C1;&#xC784;: CommonJS&#xC640; AMD </a></li>
+</ul>
 
                     
                     </section>
@@ -991,10 +946,10 @@ $(<span class="hljs-string">&quot;input&quot;</span>).prop({<span class="hljs-st
         </div>
 
         
-        <a href="../jquery/css.html" class="navigation navigation-prev " aria-label="Previous page: CSS 메소드"><i class="fa fa-angle-left"></i></a>
+        <a href="../helper/index.html" class="navigation navigation-prev " aria-label="Previous page: 도움자료"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../jquery/rule.html" class="navigation navigation-next " aria-label="Next page: 메소드 특징 이해"><i class="fa fa-angle-right"></i></a>
+        <a href="../helper/slide.html" class="navigation navigation-next " aria-label="Next page: 슬라이드"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
