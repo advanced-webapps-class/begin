@@ -51,7 +51,8 @@
 * [Node.js](nodejs/index.md)  
   * [HelloWorld](nodejs/hello-world.md)
   * [모듈 사용](nodejs/module.md)
-
+  * [NPM](nodejs/npm.md)
+  * [UglifyJS 사용](nodejs/uglifyjs.md)
 * [도움자료](helper/index.md)
   * [자바스크립트 관련](helper/js.md)
   * [슬라이드](helper/slide.md)
