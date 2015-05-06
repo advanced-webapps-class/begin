@@ -4,3 +4,5 @@
 
 * http://nodejs.org
 * javascript 사용
+* [다운로드](https://nodejs.org/download/) 에서 OS 선택하여 설치
+* [API](https://nodejs.org/api/)

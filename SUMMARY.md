@@ -49,6 +49,8 @@
   * [jQuery 사용](todo-app/native.md)
   * [MV* 패턴](todo-app/model-view.md)
 * [Node.js](nodejs/index.md)  
+  * [HelloWorld](nodejs/hello-world.md)
+  * [모듈 사용](nodejs/module.md)
 
 * [도움자료](helper/index.md)
   * [자바스크립트 관련](helper/js.md)
