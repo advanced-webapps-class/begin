@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>JSONP | Advanced Webapps Class</title>
+        <title>DOM 집어넣기 | Advanced Webapps Class</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.0-beta.5">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../ajax/module.html" />
+    <link rel="next" href="../jquery/effects.html" />
     
     
-    <link rel="prev" href="../ajax/json.html" />
+    <link rel="prev" href="../jquery/rule.html" />
     
 
         
@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="4.5" data-basepath=".." data-revision="Thu May 07 2015 16:32:42 GMT+0900 (KST)">
+    <div class="book" data-level="5.7" data-basepath=".." data-revision="Thu May 07 2015 16:32:42 GMT+0900 (KST)">
     
 
 <div class="book-summary">
@@ -490,7 +490,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="4.5" data-path="ajax/jsonp.html">
+        <li class="chapter " data-level="4.5" data-path="ajax/jsonp.html">
             
                 
                     <a href="../ajax/jsonp.html">
@@ -661,7 +661,7 @@
             
         </li>
     
-        <li class="chapter " data-level="5.7" data-path="jquery/dom-insert.html">
+        <li class="chapter active" data-level="5.7" data-path="jquery/dom-insert.html">
             
                 
                     <a href="../jquery/dom-insert.html">
@@ -1077,34 +1077,30 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="jsonp">JSONP</h1>
-<pre><code class="lang-javascript">callback( {
-    <span class="hljs-string">&quot;nick&quot;</span> : <span class="hljs-string">&quot;aji&quot;</span>,
-    <span class="hljs-string">&quot;age&quot;</span> : <span class="hljs-number">30</span>,
-    <span class="hljs-string">&quot;area&quot;</span> :  <span class="hljs-string">&quot;jeju&quot;</span>,
-    <span class="hljs-string">&quot;hobby&quot;</span> : [<span class="hljs-string">&quot;movie&quot;</span>,<span class="hljs-string">&quot;walk&quot;</span>]
-} )
-</code></pre>
+                        <h1 id="dom-%EC%A7%91%EC%96%B4%EB%84%A3%EA%B8%B0">DOM &#xC9D1;&#xC5B4;&#xB123;&#xAE30;</h1>
+<blockquote>
+<p>&#xB3D9;&#xC801;&#xC73C;&#xB85C; DOM&#xC744; &#xC0DD;&#xC131;&#xD558;&#xACE0; DOM&#xC5D0; &#xC9D1;&#xC5B4;&#xB123;&#xAE30;</p>
+</blockquote>
 <ul>
-<li>JSONP != XMLHttpRequest</li>
-<li>JSON Padding</li>
-<li>Ajax &#xD06C;&#xB85C;&#xC2A4;&#xB3C4;&#xBA54;&#xC778; &#xC774;&#xC288; &#xD68C;&#xD53C;</li>
+<li><a href="http://api.jquery.com/category/manipulation/dom-insertion-inside/" target="_blank">API</a></li>
 </ul>
-<h3 id="%EC%98%88%EC%A0%9C">&#xC608;&#xC81C;</h3>
-<pre><code class="lang-javascript"><span class="hljs-comment">//JS&#xB3D9;&#xC801; &#xC0BD;&#xC785;</span>
-<span class="hljs-keyword">var</span> head = <span class="hljs-built_in">document</span>.getElementsByTagName(<span class="hljs-string">&quot;head&quot;</span>)[<span class="hljs-number">0</span>];
-script.type = <span class="hljs-string">&apos;text/javascript&apos;</span>;
-<span class="hljs-keyword">var</span> script = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&apos;script&apos;</span>);
-script.src = <span class="hljs-string">&apos;http://api.facebook.com/method/links.getStats?format=json&amp;urls=http://daum.net&amp;callback=complate&apos;</span>;
-head.appendChild(script);
+<pre><code class="lang-javascript"><span class="hljs-comment">//#box&#xC5D0; &lt;div&gt;&#xB97C; &#xCD94;&#xAC00;&#xD574;</span>
+$(<span class="hljs-string">&apos;#box&apos;</span>).append(<span class="hljs-string">&apos;&lt;div&gt;&#xB09C; div &#xC694;&#xC18C;&lt;/div&gt;&apos;</span>);
 </code></pre>
-<p><a href="assets/jsonp.html">&#xC608;&#xC81C;</a></p>
-<h3 id="%EC%9E%A5%EC%A0%90-%EB%8B%A8%EC%A0%90">&#xC7A5;&#xC810;?&#xB2E8;&#xC810;?</h3>
-<ul>
-<li>&#xC0AC;&#xC6A9;&#xD558;&#xAE30; &#xD3B8;&#xD558;&#xB2E4;</li>
-<li>&#xD06C;&#xB85C;&#xC2A4;&#xB3C4;&#xBA54;&#xC778; &#xC774;&#xC288; &#xD53C;&#xD568;</li>
-<li>http &#xC0C1;&#xD0DC;&#xC5D0; &#xB530;&#xB978; &#xB514;&#xD14C;&#xC77C;&#xD55C; &#xCC98;&#xB9AC; &#xBD88;&#xAC00;&#xB2A5;</li>
-</ul>
+<pre><code class="lang-javascript"><span class="hljs-comment">// &lt;div&gt;&#xC694;&#xC18C;&#xB97C; #box&#xC5D0; &#xCD94;&#xAC00;&#xD574;</span>
+$(<span class="hljs-string">&apos;&lt;div&gt;&apos;</span>).appendTo( $(<span class="hljs-string">&apos;#box&apos;</span>) )
+        .text(<span class="hljs-string">&quot;&#xB09C; div &#xC694;&#xC18C;&quot;</span>)
+        .addClass(<span class="hljs-string">&quot;border&quot;</span>)
+        .css(<span class="hljs-string">&quot;background-color&quot;</span>,<span class="hljs-string">&quot;#fff&quot;</span>);
+</code></pre>
+<pre><code class="lang-javascript">$(<span class="hljs-string">&apos;&lt;div&gt;&apos;</span>, {  
+    text : <span class="hljs-string">&apos;&#xB09C; div &#xC694;&#xC18C;&apos;</span>,
+    addClass : <span class="hljs-string">&apos;border&apos;</span>,
+    css : {
+        <span class="hljs-string">&quot;background-color&quot;</span>:<span class="hljs-string">&quot;#fff&quot;</span>
+    }
+}).appendTo( $(<span class="hljs-string">&apos;#box&apos;</span>) );
+</code></pre>
 
                     
                     </section>
@@ -1115,10 +1111,10 @@ head.appendChild(script);
         </div>
 
         
-        <a href="../ajax/json.html" class="navigation navigation-prev " aria-label="Previous page: JSON"><i class="fa fa-angle-left"></i></a>
+        <a href="../jquery/rule.html" class="navigation navigation-prev " aria-label="Previous page: 메소드 특징 이해"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../ajax/module.html" class="navigation navigation-next " aria-label="Next page: 모듈화"><i class="fa fa-angle-right"></i></a>
+        <a href="../jquery/effects.html" class="navigation navigation-next " aria-label="Next page: Effects"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
