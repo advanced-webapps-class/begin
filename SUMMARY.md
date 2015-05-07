@@ -38,7 +38,7 @@
   * [CSS 메소드](jquery/css.md)
   * [Attributes 메소드](jquery/attributes.md)
   * [메소드 특징 이해](jquery/rule.md)
-  * [DOM 집어넣기](jquery/dom-insertion.md)
+  * [DOM 집어넣기](jquery/dom-insert.md)
   * [Effects](jquery/effects.md)
   * [이벤트](jquery/event.md)
   * [Ajax](jquery/ajax.md)
