@@ -6,7 +6,7 @@
 
 ## 주요 명령어
 
-[]Command-Line Tools (CLI)](https://docs.npmjs.com/cli/init)
+[Command-Line Tools (CLI)](https://docs.npmjs.com/cli/init)
 
 
 ### npm init
