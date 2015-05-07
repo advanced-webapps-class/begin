@@ -46,7 +46,7 @@
   * [도움](jquery/help.md)
 * [Todo앱 만들기](todo-app/index.md)
   * [기본 메소드 사용](todo-app/native.md)
-  * [jQuery 사용](todo-app/native.md)
+  * [jQuery 사용](todo-app/jquery.md)
   * [MV* 패턴](todo-app/model-view.md)
 * [Node.js](nodejs/index.md)  
   * [HelloWorld](nodejs/hello-world.md)
