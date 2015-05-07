@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>기본 | Advanced Webapps Class</title>
+        <title>모듈 사용 | Advanced Webapps Class</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.0-beta.5">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../ajax/feature.html" />
+    <link rel="next" href="../nodejs/npm.html" />
     
     
-    <link rel="prev" href="../ajax/index.html" />
+    <link rel="prev" href="../nodejs/hello-world.html" />
     
 
         
@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="4.1" data-basepath=".." data-revision="Thu May 07 2015 12:38:12 GMT+0900 (KST)">
+    <div class="book" data-level="7.2" data-basepath=".." data-revision="Thu May 07 2015 12:38:12 GMT+0900 (KST)">
     
 
 <div class="book-summary">
@@ -430,7 +430,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="4.1" data-path="ajax/hello.html">
+        <li class="chapter " data-level="4.1" data-path="ajax/hello.html">
             
                 
                     <a href="../ajax/hello.html">
@@ -853,7 +853,7 @@
             
         </li>
     
-        <li class="chapter " data-level="7.2" data-path="nodejs/module.html">
+        <li class="chapter active" data-level="7.2" data-path="nodejs/module.html">
             
                 
                     <a href="../nodejs/module.html">
@@ -1077,21 +1077,34 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="hello-ajax">Hello Ajax</h1>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> req = <span class="hljs-keyword">new</span> XMLHttpRequest();
+                        <h1 id="module">module</h1>
+<h2 id="%EA%B8%B0%EB%B3%B8%EB%AA%A8%EB%93%88">&#xAE30;&#xBCF8;&#xBAA8;&#xB4C8;</h2>
+<p><a href="https://nodejs.org/api/" target="_blank">API</a></p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// fs &#xBAA8;&#xB4C8; &#xC0AC;&#xC6A9; </span>
+<span class="hljs-comment">// node fs.js</span>
+<span class="hljs-keyword">var</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
 
-req.open(<span class="hljs-string">&apos;POST&apos;</span>, <span class="hljs-string">&apos;dummy.<a href="../GLOSSARY.html#xml" class="glossary-term" title="XML(Extensible Markup Language)&#xC740; W3C&#xC5D0;&#xC11C; &#xB2E4;&#xB978; &#xD2B9;&#xC218; &#xBAA9;&#xC801;&#xC758; &#xB9C8;&#xD06C;&#xC5C5; &#xC5B8;&#xC5B4;&#xB97C; &#xB9CC;&#xB4DC;&#xB294; &#xC6A9;&#xB3C4;&#xC5D0;&#xC11C; &#xAD8C;&#xC7A5;&#xB418;&#xB294; &#xB2E4;&#xBAA9;&#xC801; &#xB9C8;&#xD06C;&#xC5C5; &#xC5B8;&#xC5B4;, http://ko.wikipedia.org/wiki/XML">xml</a>&apos;</span>, <span class="hljs-literal">true</span>);
-
-req.send();
-
-req.onreadystatechange=<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
-
-};
+fs.writeFile(<span class="hljs-string">&apos;message.txt&apos;</span>, <span class="hljs-string">&apos;Hello Node&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(err)</span> </span>{
+  <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">throw</span> err;
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;It\&apos;s saved!&apos;</span>);
+});
 </code></pre>
-<p><a href="assets/hello.html">&#xC608;&#xC81C;</a></p>
-<h2 id="%EC%9A%94%EC%B2%AD-%EC%9D%91%EB%8B%B5-%ED%9D%90%EB%A6%84">&#xC694;&#xCCAD; &#xC751;&#xB2F5; &#xD750;&#xB984;</h2>
-<p><img src="http://i.imgur.com/pUVGkKC.jpg" alt=""></p>
+<h2 id="npm">npm</h2>
+<p><a href="http://npmjs.com/" target="_blank">npm</a></p>
+<h3 id="%EB%A1%9C%EC%BB%AC-%EC%84%A4%EC%B9%98">&#xB85C;&#xCEEC; &#xC124;&#xCE58;</h3>
+<p><a href="https://github.com/sindresorhus/pretty-bytes" target="_blank">pretty-bytes &#xBAA8;&#xB4C8;</a></p>
+<pre><code>$ npm install pretty-bytes --save
+</code></pre><pre><code class="lang-javascript"><span class="hljs-comment">// node pretty.js</span>
 
+<span class="hljs-keyword">var</span> prettyBytes = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;pretty-bytes&apos;</span>);
+
+<span class="hljs-built_in">console</span>.log(prettyBytes(<span class="hljs-number">100</span>));
+<span class="hljs-built_in">console</span>.log(prettyBytes(<span class="hljs-number">1337</span>));
+</code></pre>
+<h3 id="%EA%B8%80%EB%A1%9C%EB%B2%8C-%EC%84%A4%EC%B9%98">&#xAE00;&#xB85C;&#xBC8C; &#xC124;&#xCE58;</h3>
+<pre><code>$ npm install serve --global
+$ npm install pretty-bytes --global
+</code></pre>
                     
                     </section>
                 
@@ -1101,10 +1114,10 @@ req.onreadystatechange=<span class="hljs-function"><span class="hljs-keyword">fu
         </div>
 
         
-        <a href="../ajax/index.html" class="navigation navigation-prev " aria-label="Previous page: Ajax"><i class="fa fa-angle-left"></i></a>
+        <a href="../nodejs/hello-world.html" class="navigation navigation-prev " aria-label="Previous page: HelloWorld"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../ajax/feature.html" class="navigation navigation-next " aria-label="Next page: 특징"><i class="fa fa-angle-right"></i></a>
+        <a href="../nodejs/npm.html" class="navigation navigation-next " aria-label="Next page: NPM"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

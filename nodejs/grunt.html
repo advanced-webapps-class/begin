@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>기본 | Advanced Webapps Class</title>
+        <title>Grunt.js | Advanced Webapps Class</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.0-beta.5">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../ajax/feature.html" />
+    <link rel="next" href="../helper/index.html" />
     
     
-    <link rel="prev" href="../ajax/index.html" />
+    <link rel="prev" href="../nodejs/uglifyjs.html" />
     
 
         
@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="4.1" data-basepath=".." data-revision="Thu May 07 2015 12:38:12 GMT+0900 (KST)">
+    <div class="book" data-level="7.5" data-basepath=".." data-revision="Thu May 07 2015 12:38:12 GMT+0900 (KST)">
     
 
 <div class="book-summary">
@@ -430,7 +430,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="4.1" data-path="ajax/hello.html">
+        <li class="chapter " data-level="4.1" data-path="ajax/hello.html">
             
                 
                     <a href="../ajax/hello.html">
@@ -898,7 +898,7 @@
             
         </li>
     
-        <li class="chapter " data-level="7.5" data-path="nodejs/grunt.html">
+        <li class="chapter active" data-level="7.5" data-path="nodejs/grunt.html">
             
                 
                     <a href="../nodejs/grunt.html">
@@ -1077,21 +1077,55 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="hello-ajax">Hello Ajax</h1>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> req = <span class="hljs-keyword">new</span> XMLHttpRequest();
+                        <h1 id="grunt">Grunt</h1>
+<blockquote>
+<p>The JavaScript Task Runner</p>
+</blockquote>
+<p><a href="https://github.com/advanced-webapps-class/grunt-test" target="_blank">&#xC804;&#xCCB4; &#xC608;&#xC81C; &#xD504;&#xB85C;&#xC81D;&#xD2B8;</a></p>
+<h2 id="-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-http-gruntjs-com-getting-started"><a href="http://gruntjs.com/getting-started" target="_blank">&#xC2DC;&#xC791;&#xD558;&#xAE30;</a></h2>
+<h3 id="cli-%EC%84%A4%EC%B9%98">CLI &#xC124;&#xCE58;</h3>
+<pre><code>$ npm install -g grunt-cli
+</code></pre><h3 id="grunt-%EB%A1%9C%EC%BB%AC%EB%AA%A8%EB%93%88-%EC%84%A4%EC%B9%98">grunt &#xB85C;&#xCEEC;&#xBAA8;&#xB4C8; &#xC124;&#xCE58;</h3>
+<pre><code>$ npm install grunt --save-dev
+$ npm install grunt-contrib-uglify --save-dev
+</code></pre><p>package.json</p>
+<pre><code class="lang-javascript">{
+  <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;my-project-name&quot;</span>,
+  <span class="hljs-string">&quot;version&quot;</span>: <span class="hljs-string">&quot;0.1.0&quot;</span>,
+  <span class="hljs-string">&quot;devDependencies&quot;</span>: {
+    <span class="hljs-string">&quot;grunt&quot;</span>: <span class="hljs-string">&quot;^0.4.5&quot;</span>,
+    <span class="hljs-string">&quot;grunt-contrib-uglify&quot;</span>: <span class="hljs-string">&quot;^0.9.1&quot;</span>
+  }
+}
+</code></pre>
+<h3 id="gruntfile-js-%EB%A7%8C%EB%93%A4%EA%B8%B0">Gruntfile.js &#xB9CC;&#xB4E4;&#xAE30;</h3>
+<pre><code class="lang-javascript"><span class="hljs-built_in">module</span>.exports = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(grunt)</span> </span>{
 
-req.open(<span class="hljs-string">&apos;POST&apos;</span>, <span class="hljs-string">&apos;dummy.<a href="../GLOSSARY.html#xml" class="glossary-term" title="XML(Extensible Markup Language)&#xC740; W3C&#xC5D0;&#xC11C; &#xB2E4;&#xB978; &#xD2B9;&#xC218; &#xBAA9;&#xC801;&#xC758; &#xB9C8;&#xD06C;&#xC5C5; &#xC5B8;&#xC5B4;&#xB97C; &#xB9CC;&#xB4DC;&#xB294; &#xC6A9;&#xB3C4;&#xC5D0;&#xC11C; &#xAD8C;&#xC7A5;&#xB418;&#xB294; &#xB2E4;&#xBAA9;&#xC801; &#xB9C8;&#xD06C;&#xC5C5; &#xC5B8;&#xC5B4;, http://ko.wikipedia.org/wiki/XML">xml</a>&apos;</span>, <span class="hljs-literal">true</span>);
+  <span class="hljs-comment">// Project configuration.</span>
+  grunt.initConfig({
+    pkg: grunt.file.readJSON(<span class="hljs-string">&apos;package.json&apos;</span>),
+    uglify: {
+      options: {
+        banner: <span class="hljs-string">&apos;/*! &lt;%= pkg.name %&gt; &lt;%= grunt.template.today(&quot;yyyy-mm-dd&quot;) %&gt; */\n&apos;</span>
+      },
+      build: {
+        src: <span class="hljs-string">&apos;src/&lt;%= pkg.name %&gt;.js&apos;</span>,
+        dest: <span class="hljs-string">&apos;build/&lt;%= pkg.name %&gt;.min.js&apos;</span>
+      }
+    }
+  });
 
-req.send();
+  <span class="hljs-comment">// Load the plugin that provides the &quot;uglify&quot; task.</span>
+  grunt.loadNpmTasks(<span class="hljs-string">&apos;grunt-contrib-uglify&apos;</span>);
 
-req.onreadystatechange=<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
+  <span class="hljs-comment">// Default task(s).</span>
+  grunt.registerTask(<span class="hljs-string">&apos;default&apos;</span>, [<span class="hljs-string">&apos;uglify&apos;</span>]);
 
 };
 </code></pre>
-<p><a href="assets/hello.html">&#xC608;&#xC81C;</a></p>
-<h2 id="%EC%9A%94%EC%B2%AD-%EC%9D%91%EB%8B%B5-%ED%9D%90%EB%A6%84">&#xC694;&#xCCAD; &#xC751;&#xB2F5; &#xD750;&#xB984;</h2>
-<p><img src="http://i.imgur.com/pUVGkKC.jpg" alt=""></p>
-
+<h3 id="task-%EC%8B%A4%ED%96%89">Task &#xC2E4;&#xD589;</h3>
+<pre><code>$ grunt uglify
+</code></pre>
                     
                     </section>
                 
@@ -1101,10 +1135,10 @@ req.onreadystatechange=<span class="hljs-function"><span class="hljs-keyword">fu
         </div>
 
         
-        <a href="../ajax/index.html" class="navigation navigation-prev " aria-label="Previous page: Ajax"><i class="fa fa-angle-left"></i></a>
+        <a href="../nodejs/uglifyjs.html" class="navigation navigation-prev " aria-label="Previous page: UglifyJS 사용"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../ajax/feature.html" class="navigation navigation-next " aria-label="Next page: 특징"><i class="fa fa-angle-right"></i></a>
+        <a href="../helper/index.html" class="navigation navigation-next " aria-label="Next page: 도움자료"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>기본 | Advanced Webapps Class</title>
+        <title>HelloWorld | Advanced Webapps Class</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.0-beta.5">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../ajax/feature.html" />
+    <link rel="next" href="../nodejs/module.html" />
     
     
-    <link rel="prev" href="../ajax/index.html" />
+    <link rel="prev" href="../nodejs/index.html" />
     
 
         
@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="4.1" data-basepath=".." data-revision="Thu May 07 2015 12:38:12 GMT+0900 (KST)">
+    <div class="book" data-level="7.1" data-basepath=".." data-revision="Thu May 07 2015 12:38:12 GMT+0900 (KST)">
     
 
 <div class="book-summary">
@@ -430,7 +430,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="4.1" data-path="ajax/hello.html">
+        <li class="chapter " data-level="4.1" data-path="ajax/hello.html">
             
                 
                     <a href="../ajax/hello.html">
@@ -838,7 +838,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="7.1" data-path="nodejs/hello-world.html">
+        <li class="chapter active" data-level="7.1" data-path="nodejs/hello-world.html">
             
                 
                     <a href="../nodejs/hello-world.html">
@@ -1077,21 +1077,24 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="hello-ajax">Hello Ajax</h1>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> req = <span class="hljs-keyword">new</span> XMLHttpRequest();
+                        <h1 id="hello-world">Hello World</h1>
+<blockquote>
+<p>&#xAC04;&#xB2E8;&#xD55C; &#xC6F9;&#xC11C;&#xBC84; &#xB9CC;&#xB4E4;&#xAE30; </p>
+</blockquote>
+<pre><code class="lang-javascript"><span class="hljs-comment">// server.js</span>
+<span class="hljs-keyword">var</span> http = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;http&apos;</span>);
 
-req.open(<span class="hljs-string">&apos;POST&apos;</span>, <span class="hljs-string">&apos;dummy.<a href="../GLOSSARY.html#xml" class="glossary-term" title="XML(Extensible Markup Language)&#xC740; W3C&#xC5D0;&#xC11C; &#xB2E4;&#xB978; &#xD2B9;&#xC218; &#xBAA9;&#xC801;&#xC758; &#xB9C8;&#xD06C;&#xC5C5; &#xC5B8;&#xC5B4;&#xB97C; &#xB9CC;&#xB4DC;&#xB294; &#xC6A9;&#xB3C4;&#xC5D0;&#xC11C; &#xAD8C;&#xC7A5;&#xB418;&#xB294; &#xB2E4;&#xBAA9;&#xC801; &#xB9C8;&#xD06C;&#xC5C5; &#xC5B8;&#xC5B4;, http://ko.wikipedia.org/wiki/XML">xml</a>&apos;</span>, <span class="hljs-literal">true</span>);
+http.createServer(<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(req, res)</span> </span>{
+  res.writeHead(<span class="hljs-number">200</span>, {<span class="hljs-string">&apos;Content-Type&apos;</span>: <span class="hljs-string">&apos;text/plain&apos;</span>});
+  res.end(<span class="hljs-string">&apos;Hello World\n&apos;</span>);
+}).listen(<span class="hljs-number">1337</span>, <span class="hljs-string">&apos;127.0.0.1&apos;</span>);
 
-req.send();
-
-req.onreadystatechange=<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
-
-};
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Server running at http://127.0.0.1:1337/&apos;</span>);
 </code></pre>
-<p><a href="assets/hello.html">&#xC608;&#xC81C;</a></p>
-<h2 id="%EC%9A%94%EC%B2%AD-%EC%9D%91%EB%8B%B5-%ED%9D%90%EB%A6%84">&#xC694;&#xCCAD; &#xC751;&#xB2F5; &#xD750;&#xB984;</h2>
-<p><img src="http://i.imgur.com/pUVGkKC.jpg" alt=""></p>
+<pre><code>$ node server.js
 
+Server running at http://127.0.0.1:1337/
+</code></pre>
                     
                     </section>
                 
@@ -1101,10 +1104,10 @@ req.onreadystatechange=<span class="hljs-function"><span class="hljs-keyword">fu
         </div>
 
         
-        <a href="../ajax/index.html" class="navigation navigation-prev " aria-label="Previous page: Ajax"><i class="fa fa-angle-left"></i></a>
+        <a href="../nodejs/index.html" class="navigation navigation-prev " aria-label="Previous page: Node.js"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../ajax/feature.html" class="navigation navigation-next " aria-label="Next page: 특징"><i class="fa fa-angle-right"></i></a>
+        <a href="../nodejs/module.html" class="navigation navigation-next " aria-label="Next page: 모듈 사용"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>

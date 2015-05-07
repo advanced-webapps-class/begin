@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=11; IE=10; IE=9; IE=8; IE=7; IE=EDGE" />
-        <title>기본 | Advanced Webapps Class</title>
+        <title>NPM | Advanced Webapps Class</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.0.0-beta.5">
@@ -20,10 +20,10 @@
         
     
     
-    <link rel="next" href="../ajax/feature.html" />
+    <link rel="next" href="../nodejs/uglifyjs.html" />
     
     
-    <link rel="prev" href="../ajax/index.html" />
+    <link rel="prev" href="../nodejs/module.html" />
     
 
         
@@ -36,7 +36,7 @@
     
 
         
-    <div class="book" data-level="4.1" data-basepath=".." data-revision="Thu May 07 2015 12:38:12 GMT+0900 (KST)">
+    <div class="book" data-level="7.3" data-basepath=".." data-revision="Thu May 07 2015 12:38:12 GMT+0900 (KST)">
     
 
 <div class="book-summary">
@@ -430,7 +430,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="4.1" data-path="ajax/hello.html">
+        <li class="chapter " data-level="4.1" data-path="ajax/hello.html">
             
                 
                     <a href="../ajax/hello.html">
@@ -868,7 +868,7 @@
             
         </li>
     
-        <li class="chapter " data-level="7.3" data-path="nodejs/npm.html">
+        <li class="chapter active" data-level="7.3" data-path="nodejs/npm.html">
             
                 
                     <a href="../nodejs/npm.html">
@@ -1077,20 +1077,29 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="hello-ajax">Hello Ajax</h1>
-<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> req = <span class="hljs-keyword">new</span> XMLHttpRequest();
-
-req.open(<span class="hljs-string">&apos;POST&apos;</span>, <span class="hljs-string">&apos;dummy.<a href="../GLOSSARY.html#xml" class="glossary-term" title="XML(Extensible Markup Language)&#xC740; W3C&#xC5D0;&#xC11C; &#xB2E4;&#xB978; &#xD2B9;&#xC218; &#xBAA9;&#xC801;&#xC758; &#xB9C8;&#xD06C;&#xC5C5; &#xC5B8;&#xC5B4;&#xB97C; &#xB9CC;&#xB4DC;&#xB294; &#xC6A9;&#xB3C4;&#xC5D0;&#xC11C; &#xAD8C;&#xC7A5;&#xB418;&#xB294; &#xB2E4;&#xBAA9;&#xC801; &#xB9C8;&#xD06C;&#xC5C5; &#xC5B8;&#xC5B4;, http://ko.wikipedia.org/wiki/XML">xml</a>&apos;</span>, <span class="hljs-literal">true</span>);
-
-req.send();
-
-req.onreadystatechange=<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span></span>{
-
-};
+                        <h1 id="npm">NPM</h1>
+<blockquote>
+<p>npm is the package manager for Node.js, IO.js, Mobile...</p>
+</blockquote>
+<h2 id="%EC%A3%BC%EC%9A%94-%EB%AA%85%EB%A0%B9%EC%96%B4">&#xC8FC;&#xC694; &#xBA85;&#xB839;&#xC5B4;</h2>
+<p><a href="https://docs.npmjs.com/cli/init" target="_blank">Command-Line Tools (CLI)</a></p>
+<h3 id="npm-init">npm init</h3>
+<p>&#xC571; package.json &#xC791;&#xC131;</p>
+<pre><code>$ npm init
+</code></pre><p>&#xCC38;&#xACE0; package.json: <a href="https://github.com/sindresorhus/pretty-bytes" target="_blank">pretty-bytes &#xBAA8;&#xB4C8;</a></p>
+<h3 id="npm-install-%EB%AA%A8%EB%93%88">npm install [&#xBAA8;&#xB4C8;]</h3>
+<p>&#xBAA8;&#xB4C8; &#xC124;&#xCE58;</p>
+<pre><code>$ npm install jquery --save
+$ npm uninstall jquery
+</code></pre><h3 id="npm-start">npm start</h3>
+<pre><code class="lang-javascript">...
+ <span class="hljs-string">&quot;scripts&quot;</span>: {
+    <span class="hljs-string">&quot;test&quot;</span>: <span class="hljs-string">&quot;echo \&quot;Error: no test specified\&quot; &amp;&amp; exit 1&quot;</span>,
+    <span class="hljs-string">&quot;start&quot;</span>: <span class="hljs-string">&quot;node index.js&quot;</span>,
+    <span class="hljs-string">&quot;deploy&quot;</span>: <span class="hljs-string">&quot;grunt deploy&quot;</span>
+  }
+...
 </code></pre>
-<p><a href="assets/hello.html">&#xC608;&#xC81C;</a></p>
-<h2 id="%EC%9A%94%EC%B2%AD-%EC%9D%91%EB%8B%B5-%ED%9D%90%EB%A6%84">&#xC694;&#xCCAD; &#xC751;&#xB2F5; &#xD750;&#xB984;</h2>
-<p><img src="http://i.imgur.com/pUVGkKC.jpg" alt=""></p>
 
                     
                     </section>
@@ -1101,10 +1110,10 @@ req.onreadystatechange=<span class="hljs-function"><span class="hljs-keyword">fu
         </div>
 
         
-        <a href="../ajax/index.html" class="navigation navigation-prev " aria-label="Previous page: Ajax"><i class="fa fa-angle-left"></i></a>
+        <a href="../nodejs/module.html" class="navigation navigation-prev " aria-label="Previous page: 모듈 사용"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../ajax/feature.html" class="navigation navigation-next " aria-label="Next page: 특징"><i class="fa fa-angle-right"></i></a>
+        <a href="../nodejs/uglifyjs.html" class="navigation navigation-next " aria-label="Next page: UglifyJS 사용"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
