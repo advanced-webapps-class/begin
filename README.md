@@ -3,7 +3,7 @@
 > 웹 Front-end 개발 분야의 전문과정을 통한 체계적이고 실질적인 구현 방법을 습득한다
 
 
-* [Book](https://advanced-webapps-class.github.io/front-end-start/)
+* [Book](http://advanced-webapps-class.github.io/begin)
 * [Classroom](https://github.com/advanced-webapps-class/classroom)
 * [이전 문서 참고](http://niceaji.github.io/javascript-study/)
 
