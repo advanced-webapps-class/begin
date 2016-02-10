@@ -6,6 +6,7 @@
 2.  자바의 유명세를 본 따 '자바 스크립트'로 변경3.  MS에서 Jscript발표
 4.  ECMA에서 자바스크립트 표준 관리
 5.  ECMA-262 표준 제정 -> ECMAScript
+6.  [ES5, ES6](http://hacks.mozilla.or.kr/2015/08/es6-in-depth-an-introduction/)
 
 [자바스크립트의 과거](http://wit.nts-corp.com/2014/08/13/1925)
 
