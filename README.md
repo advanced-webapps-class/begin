@@ -28,5 +28,6 @@ $ npm start
 ### gitbook 배포
 
 ```
-$ grunt deploy
+$ npm build
+$ npm deploy
 ```
