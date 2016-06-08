@@ -28,6 +28,6 @@ $ npm start
 ### gitbook 배포
 
 ```
-$ npm build
-$ npm deploy
+$ npm run build
+$ npm run deploy
 ```

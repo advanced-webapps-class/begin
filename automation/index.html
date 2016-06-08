@@ -5,7 +5,7 @@
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <title>모듈 사용 | Advanced Webapps Class</title>
+        <title>프론트엔드 개발 자동화 | Advanced Webapps Class</title>
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="">
         <meta name="generator" content="GitBook 2.6.7">
@@ -37,10 +37,10 @@
         
     
     
-    <link rel="next" href="../nodejs/npm.html" />
+    <link rel="next" href="../automation/json-server.html" />
     
     
-    <link rel="prev" href="../nodejs/hello-world.html" />
+    <link rel="prev" href="../nodejs/quiz-todoapp.html" />
     
 
         
@@ -49,9 +49,9 @@
         
         
     <div class="book"
-        data-level="7.2"
-        data-chapter-title="모듈 사용"
-        data-filepath="nodejs/module.md"
+        data-level="8"
+        data-chapter-title="프론트엔드 개발 자동화"
+        data-filepath="automation/index.md"
         data-basepath=".."
         data-revision="Wed Jun 08 2016 22:46:40 GMT+0900 (KST)"
         data-innerlanguage="">
@@ -869,7 +869,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="7.2" data-path="nodejs/module.html">
+        <li class="chapter " data-level="7.2" data-path="nodejs/module.html">
             
                 
                     <a href="../nodejs/module.html">
@@ -949,7 +949,7 @@
             
         </li>
     
-        <li class="chapter " data-level="8" data-path="automation/index.html">
+        <li class="chapter active" data-level="8" data-path="automation/index.html">
             
                 
                     <a href="../automation/index.html">
@@ -1203,34 +1203,12 @@
                 
                     <section class="normal" id="section-">
                     
-                        <h1 id="module">module</h1>
-<h2 id="&#xAE30;&#xBCF8;&#xBAA8;&#xB4C8;">&#xAE30;&#xBCF8;&#xBAA8;&#xB4C8;</h2>
-<p><a href="https://nodejs.org/api/" target="_blank">API</a></p>
-<pre><code class="lang-javascript"><span class="hljs-comment">// fs &#xBAA8;&#xB4C8; &#xC0AC;&#xC6A9; </span>
-<span class="hljs-comment">// node fs.js</span>
-<span class="hljs-keyword">var</span> fs = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;fs&apos;</span>);
+                        <h1 id="&#xD504;&#xB860;&#xD2B8;&#xC5D4;&#xB4DC;-&#xAC1C;&#xBC1C;-&#xC790;&#xB3D9;&#xD654;">&#xD504;&#xB860;&#xD2B8;&#xC5D4;&#xB4DC; &#xAC1C;&#xBC1C; &#xC790;&#xB3D9;&#xD654;</h1>
+<ul>
+<li>&#xC790;&#xB3D9;&#xD654;&#xB97C; &#xD1B5;&#xD55C; &#xC0DD;&#xC0B0;&#xC131; &#xD5A5;&#xC0C1;</li>
+<li>&#xCD5C;&#xADFC; &#xBA87;&#xB144;&#xC0AC;&#xC774; &#xB9CE;&#xC740; &#xC0C8;&#xB85C;&#xC6B4; &#xBCC0;&#xD654;</li>
+</ul>
 
-fs.writeFile(<span class="hljs-string">&apos;message.txt&apos;</span>, <span class="hljs-string">&apos;Hello Node&apos;</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">err</span>) </span>{
-  <span class="hljs-keyword">if</span> (err) <span class="hljs-keyword">throw</span> err;
-  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;It\&apos;s saved!&apos;</span>);
-});
-</code></pre>
-<h2 id="npm">npm</h2>
-<p><a href="http://npmjs.com/" target="_blank">npm</a></p>
-<h3 id="&#xB85C;&#xCEEC;-&#xC124;&#xCE58;">&#xB85C;&#xCEEC; &#xC124;&#xCE58;</h3>
-<p><a href="https://github.com/sindresorhus/pretty-bytes" target="_blank">pretty-bytes &#xBAA8;&#xB4C8;</a></p>
-<pre><code>$ npm install pretty-bytes --save
-</code></pre><pre><code class="lang-javascript"><span class="hljs-comment">// node pretty.js</span>
-
-<span class="hljs-keyword">var</span> prettyBytes = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;pretty-bytes&apos;</span>);
-
-<span class="hljs-built_in">console</span>.log(prettyBytes(<span class="hljs-number">100</span>));
-<span class="hljs-built_in">console</span>.log(prettyBytes(<span class="hljs-number">1337</span>));
-</code></pre>
-<h3 id="&#xAE00;&#xB85C;&#xBC8C;-&#xC124;&#xCE58;">&#xAE00;&#xB85C;&#xBC8C; &#xC124;&#xCE58;</h3>
-<pre><code>$ npm install serve --global
-$ npm install pretty-bytes --global
-</code></pre>
                     
                     </section>
                 
@@ -1240,10 +1218,10 @@ $ npm install pretty-bytes --global
         </div>
 
         
-        <a href="../nodejs/hello-world.html" class="navigation navigation-prev " aria-label="Previous page: HelloWorld"><i class="fa fa-angle-left"></i></a>
+        <a href="../nodejs/quiz-todoapp.html" class="navigation navigation-prev " aria-label="Previous page: 퀴즈-Todo앱 build"><i class="fa fa-angle-left"></i></a>
         
         
-        <a href="../nodejs/npm.html" class="navigation navigation-next " aria-label="Next page: NPM"><i class="fa fa-angle-right"></i></a>
+        <a href="../automation/json-server.html" class="navigation navigation-next " aria-label="Next page: 가상 REST API 서버"><i class="fa fa-angle-right"></i></a>
         
     </div>
 </div>
