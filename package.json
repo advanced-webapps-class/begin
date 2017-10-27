@@ -24,7 +24,7 @@
   "homepage": "https://github.com/niceaji/advanced-webapps-class",
   "devDependencies": {
     "grunt": "^0.4.5",
+    "grunt-cli": "^1.2.0",
     "grunt-gh-pages": "^0.10.0"
-  },
-  "dependencies": {}
+  }
 }
