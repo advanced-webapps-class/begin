@@ -18,8 +18,8 @@ callback( {
 ```javascript
 //JS동적 삽입
 var head = document.getElementsByTagName("head")[0];
-script.type = 'text/javascript';
 var script = document.createElement('script');
+script.type = 'text/javascript';
 script.src = 'http://api.facebook.com/method/links.getStats?format=json&urls=http://daum.net&callback=complate';
 head.appendChild(script);
 ```
