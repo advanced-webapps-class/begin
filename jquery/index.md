@@ -7,7 +7,7 @@
 * [jQuery](http://jquery.com/)
 * [오픈소스](https://github.com/jquery/jquery)
 * [많은 관련 라이브러리](https://plugins.jquery.com/)
-* [구글 트렌드](http://www.google.com/trends/explore#q=jquery,prototype,script.aculo.us,yui,dojo,extjs,gwt,mootools,)
+* [구글 트렌드](https://trends.google.com/trends/explore?q=jquery,react,angular,vue)
 
 
 
