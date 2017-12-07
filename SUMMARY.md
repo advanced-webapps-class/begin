@@ -61,6 +61,8 @@
   * [가상 REST API 서버](automation/json-server.md)
   * [작업흐름 향상, gulp.js](automation/gulp.md)
   * [Command-line 유틸들](automation/cli.md)
+* [서비스 배포](deploy/index.md)
+    * [배포](deploy/gh-pages.md)
 * [HTML5](html5/index.md)
   * [주요링크](html5/link.md)
   * [서비스 예제](html5/example.md)
