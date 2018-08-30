@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/niceaji/advanced-webapps-class",
   "devDependencies": {
+    "gitbook": "^3.2.3",
+    "gitbook-cli": "^2.3.2",
     "grunt": "^0.4.5",
     "grunt-cli": "^1.2.0",
     "grunt-gh-pages": "^0.10.0"
