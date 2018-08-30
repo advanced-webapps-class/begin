@@ -13,12 +13,10 @@
 
 ## 에디터
 
-![](http://i.imgur.com/2up0CSR.png)
+![](https://i.imgur.com/sMimClE.png)
 
-* [Atom](https://atom.io/)
+* [VisualStudio Code](https://code.visualstudio.com/)
 * javascript로 만들어진 (node.js)
-* [Packages](https://atom.io/packages)
-	* [Emmet](https://atom.io/packages/emmet)
 
 ## git
 
