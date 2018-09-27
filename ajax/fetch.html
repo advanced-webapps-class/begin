@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>API · Advanced Webapps Class</title>
+        <title>Fetch · Advanced Webapps Class</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.2">
@@ -60,7 +60,7 @@
     <link rel="next" href="json.html" />
     
     
-    <link rel="prev" href="feature.html" />
+    <link rel="prev" href="xml-http-request.html" />
     
 
     </head>
@@ -446,12 +446,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.3" data-path="api.html">
+        <li class="chapter " data-level="1.5.3" data-path="xml-http-request.html">
             
-                <a href="api.html">
+                <a href="xml-http-request.html">
             
                     
-                    API
+                    XMLHttpRequest
             
                 </a>
             
@@ -459,7 +459,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.4" data-path="json.html">
+        <li class="chapter active" data-level="1.5.4" data-path="fetch.html">
+            
+                <a href="fetch.html">
+            
+                    
+                    Fetch
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="json.html">
             
                 <a href="json.html">
             
@@ -472,7 +485,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="jsonp.html">
+        <li class="chapter " data-level="1.5.6" data-path="jsonp.html">
             
                 <a href="jsonp.html">
             
@@ -485,7 +498,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.6" data-path="module.html">
+        <li class="chapter " data-level="1.5.7" data-path="module.html">
             
                 <a href="module.html">
             
@@ -498,7 +511,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.7" data-path="quiz.html">
+        <li class="chapter " data-level="1.5.8" data-path="quiz.html">
             
                 <a href="quiz.html">
             
@@ -511,7 +524,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.8" data-path="quiz-openapi.html">
+        <li class="chapter " data-level="1.5.9" data-path="quiz-openapi.html">
             
                 <a href="quiz-openapi.html">
             
@@ -1127,7 +1140,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >API</a>
+        <a href=".." >Fetch</a>
     </h1>
 </div>
 
@@ -1142,61 +1155,22 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="ajax-api">Ajax API</h1>
-<p><a href="https://developer.mozilla.org/ko/docs/XMLHttpRequest" target="_blank">XMLHttpRequest</a></p>
+                                <h1 id="ajax-api---fetch">Ajax API - fetch()</h1>
+<pre><code class="lang-javascript">fetch(<span class="hljs-string">&apos;issue.json&apos;</span>)
+  .then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>)</span>{
+  response.json().then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">data</span>)</span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;json data:&apos;</span>,data);
+  });
+  })
+ .catch(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">err</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&apos;Fetch Error :-S&apos;</span>, err);
+  });
+</code></pre>
 <ul>
-<li>open(string method,string url,boolean asynch)<ul>
-<li>HTTP &#xC694;&#xCCAD;&#xACFC; &#xB3D9;&#xAE30;/&#xBE44;&#xB3D9;&#xAE30; &#xD1B5;&#xC2E0;&#xC5D0; &#xB530;&#xB978; &#xD544;&#xC694;&#xC0AC;&#xD56D;&#xC744; &#xC900;&#xBE44;</li>
-</ul>
-</li>
-<li>setRequestHeader(string header,string value)<ul>
-<li>&#xC694;&#xCCAD; &#xD5E4;&#xB354;&#xB97C; &#xC124;&#xC815;&#xD569;&#xB2C8;&#xB2E4;. &#xBC18;&#xB4DC;&#xC2DC; open( ) &#xBA54;&#xC18C;&#xB4DC;&#xB97C; &#xD638;&#xCD9C;&#xD55C; &#xB2E4;&#xC74C; &#xC0AC;&#xC6A9;</li>
-</ul>
-</li>
-<li>onreadystatechange<ul>
-<li>&#xC815;&#xC758;&#xB418;&#xB294; &#xCF5C;&#xBC31; &#xD568;&#xC218;&#xB294; readyState&#xAC00; &#xBCC0;&#xACBD;&#xB420; &#xB54C;&#xB9C8;&#xB2E4; &#xD638;&#xCD9C;</li>
-</ul>
-</li>
-<li>send(string)<ul>
-<li>HTTP &#xC694;&#xCCAD;&#xC744; &#xD569;&#xB2C8;&#xB2E4;.</li>
-</ul>
-</li>
-<li>readyState<ul>
-<li>0 : uninitialized(open( ) &#xBA54;&#xC18C;&#xB4DC;&#xAC00; &#xD638;&#xCD9C;&#xB418;&#xC9C0; &#xC54A;&#xC740; &#xC0C1;&#xD0DC;)</li>
-<li>1 : loading(send( ) &#xBA54;&#xC18C;&#xB4DC;&#xAC00; &#xD638;&#xCD9C;&#xB418;&#xC9C0; &#xC54A;&#xC740; &#xC0C1;&#xD0DC;)</li>
-<li>2 : loaded(send( ) &#xBA54;&#xC18C;&#xB4DC;&#xAC00; &#xD638;&#xCD9C;&#xB41C; &#xC0C1;&#xD0DC;. header&#xC640; status &#xC0AC;&#xC6A9; &#xAC00;&#xB2A5;)</li>
-<li>3 : interactive(reponseText&#xC5D0; &#xBD80;&#xBD84;&#xC801;&#xC778; &#xB370;&#xC774;&#xD130;&#xAC00; &#xC800;&#xC7A5;&#xB428;)</li>
-<li>4 : completed</li>
-</ul>
-</li>
-<li>status : &#xC751;&#xB2F5; &#xC0C1;&#xD0DC; &#xCF54;&#xB4DC;<ul>
-<li>200(Okay), 404(Not Found) &#xB4F1;</li>
-</ul>
-</li>
-<li>statusText<ul>
-<li>&#xC751;&#xB2F5;&#xC0C1;&#xD0DC; &#xBB38;&#xC790;&#xC5F4;</li>
-</ul>
-</li>
-<li>abort()<ul>
-<li>HTTP &#xC694;&#xCCAD;&#xC744; &#xCDE8;&#xC18C;</li>
-</ul>
-</li>
-<li>responseText<ul>
-<li>&#xBC18;&#xD658;&#xB41C; &#xC77C;&#xBC18; &#xD14D;&#xC2A4;&#xD2B8; &#xBB38;&#xC790;&#xC5F4;</li>
-</ul>
-</li>
-<li>responseXML<ul>
-<li>&#xBC18;&#xD658;&#xB41C; XML , DOM&#xAC1D;&#xCCB4;</li>
-</ul>
-</li>
-<li>getAllResponseHeaders()<ul>
-<li>&#xBAA8;&#xB4E0; &#xD5E4;&#xB354; &#xC815;&#xBCF4;&#xB97C; &#xBC18;&#xD658;,&#xBB38;&#xC790;&#xC5F4;</li>
-</ul>
-</li>
-<li>getResponseHeader(string header)<ul>
-<li>&#xD2B9;&#xC815; &#xD5E4;&#xB354; &#xAC12;&#xC744; &#xBC18;&#xD658;,&#xBB38;&#xC790;&#xC5F4;</li>
-</ul>
-</li>
+<li><a href="https://developers.google.com/web/updates/2015/03/introduction-to-fetch" target="_blank">&#xC608;&#xC81C;</a></li>
+<li><a href="https://ko.wikipedia.org/wiki/WHATWG" target="_blank">WHATWG</a> <a href="https://fetch.spec.whatwg.org/" target="_blank">Fetch standard</a></li>
+<li><a href="https://caniuse.com/#search=fetch" target="_blank">&#xBE0C;&#xB77C;&#xC6B0;&#xC800; &#xC9C0;&#xC6D0;&#xD604;&#xD669;</a></li>
+<li><a href="https://ourcodeworld.com/articles/read/625/top-5-best-javascript-polyfills-for-the-fetch-api" target="_blank">Polyfill</a></li>
 </ul>
 
                                 
@@ -1225,7 +1199,7 @@
 
             
                 
-                <a href="feature.html" class="navigation navigation-prev " aria-label="Previous page: 특징">
+                <a href="xml-http-request.html" class="navigation navigation-prev " aria-label="Previous page: XMLHttpRequest">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -1241,7 +1215,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"API","level":"1.5.3","depth":2,"next":{"title":"JSON","level":"1.5.4","depth":2,"path":"ajax/json.md","ref":"ajax/json.md","articles":[]},"previous":{"title":"특징","level":"1.5.2","depth":2,"path":"ajax/feature.md","ref":"ajax/feature.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"gitbook-readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advanced Webapps Class","gitbook":"*"},"file":{"path":"ajax/api.md","mtime":"2017-09-29T00:42:29.000Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-08-30T05:10:34.273Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Fetch","level":"1.5.4","depth":2,"next":{"title":"JSON","level":"1.5.5","depth":2,"path":"ajax/json.md","ref":"ajax/json.md","articles":[]},"previous":{"title":"XMLHttpRequest","level":"1.5.3","depth":2,"path":"ajax/xml-http-request.md","ref":"ajax/xml-http-request.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"gitbook-readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advanced Webapps Class","gitbook":"*"},"file":{"path":"ajax/fetch.md","mtime":"2018-09-27T11:18:06.058Z","type":"markdown"},"gitbook":{"version":"3.2.2","time":"2018-09-27T11:19:43.726Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
