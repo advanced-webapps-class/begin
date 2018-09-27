@@ -1,4 +1,4 @@
-# Ajax API
+# Ajax API - XMLHttpRequest 
 
 
 [XMLHttpRequest](https://developer.mozilla.org/ko/docs/XMLHttpRequest)
