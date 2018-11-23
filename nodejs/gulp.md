@@ -48,3 +48,7 @@ gulp.task('js', function() {
             .pipe(gulp.dest('all.js'))
 });
 ```
+
+## 예제 프로젝트 
+
+https://github.com/advanced-webapps-class/gulp-test

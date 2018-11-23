@@ -56,7 +56,6 @@
   * [UglifyJS 사용](nodejs/uglifyjs.md)
   * [빌드](nodejs/build.md)
     * [Gulp.js](nodejs/gulp.md)
-    * [Grunt.js](nodejs/grunt.md)
   * [퀴즈-Todo앱 build](nodejs/quiz-todoapp.md)
 * [프론트엔드 개발 자동화](automation/index.md)
   * [가상 REST API 서버](automation/json-server.md)

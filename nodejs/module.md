@@ -41,6 +41,6 @@ console.log(prettyBytes(1337));
 
 ```
 $ npm install serve --global
-$ npm install pretty-bytes --global
+$ npm install cowsay --global
 ```
 
